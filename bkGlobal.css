@@ -1,0 +1,48 @@
+body {
+    font-family: "loos-normal", serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    font-size: 14pt;
+    height: 50px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav li {
+    margin: 10px;
+}
+
+.nav img {
+    width: 25px;
+}
+
+#header {
+    border-bottom: solid 1px #000000;
+}
+
+#footer {
+    border-top: solid 1px #000000;
+}
