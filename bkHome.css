@@ -1,0 +1,71 @@
+#container {
+    font-size: 48pt;
+    text-align: center;
+}
+
+#opening {
+    background-image: url(media/IMG_2883.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vw;
+
+    color: #FFFFFF;
+    font-size: 18vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+#motto {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 100px 0px;
+}
+
+#action {
+    position: relative;
+    background-color: #000000;
+}
+
+#action span {
+    color: #FFFFFF;
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    z-index: 1;
+}
+
+#action-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.action-img {
+    width: 33.33%;
+    height: 30vw;
+    opacity: 0.5;
+}
+
+#action-1 {
+    background-image: url(media/70284751896__78F04272-7EB3-4A08-AB43-65C8F6ACB463.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#action-2 {
+    background-image: url(media/70284756260__3E83E9E0-28E6-4CF2-BC66-D686B45A5B8B.jpeg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#action-3 {
+    background-image: url(media/70284766952__2CCE3B85-4E7A-440E-8638-424CDCAC402B.jpeg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

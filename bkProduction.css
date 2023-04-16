@@ -1,0 +1,41 @@
+
+#AssemblyPics img{
+    object-fit:cover;
+    width:23%;
+    margin: 5px;
+    height: auto;
+}
+#AssemblyPics{ 
+    margin-top:10px;
+    margin-bottom:100px;
+
+}
+#HowItsMade{
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+.title{
+    font-size:14vw;
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+
+}
+.heading{
+    font-size:8vw;
+    line-height: 90%;
+    margin-bottom: 10px;
+}
+
+.section{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+#fabricstorepic{
+    width:35%;
+    margin-right: 20px;
+}
+
+

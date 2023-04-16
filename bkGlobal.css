@@ -40,9 +40,15 @@ li {
 }
 
 #header {
+    padding-bottom: 5px;
     border-bottom: solid 1px #000000;
 }
 
 #footer {
+    padding-top: 5px;
     border-top: solid 1px #000000;
+    margin-top: 50%;
+    text-align: center;
+    
+
 }
