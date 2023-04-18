@@ -2,8 +2,6 @@
   font-size:14vw;
   text-align: center;
   padding-top:50px;
-  padding-bottom:50px;
-
 }
 .heading{
   font-size:6vw;
@@ -30,7 +28,9 @@
 }
 
 #interface{
-  margin:10%;
+  margin-right:10%;
+  margin-left:10%;
+
 }
 
 #items{
