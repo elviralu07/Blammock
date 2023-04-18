@@ -1,121 +1,67 @@
-body {
-    font-family: "loos-normal", serif;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-li {
-    list-style: none;
-    display: inline-block;
-}
-
-.menu a:hover {
-    text-decoration: underline;
-}
-
-.menu {
-    font-size: 14pt;
-    height: 50px;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.nav li {
-    margin: 10px;
-}
-
-.nav img {
-    width: 25px;
-}
-
-#header {
-    padding-bottom: 5px;
-    border-bottom: solid 1px #000000;
-}
-
-#footer {
-    border-top: solid 1px #000000;
-    text-align: center;
-}
 
 .title {
     text-align: center;
-    font-size: 130pt;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 5%;
+    font-size: 12vw;
+    line-height: 40vw;
 }
 
-.heading1 {
-    padding-left: 20%;
-    padding-right: 20%;
-    display: flex;
-    flex-direction: row;
+.heading {
+    font-size: 8vw;
+    line-height: 90%;
+    margin-bottom:20px
+
+}
+#section1{
+    display:flex;
     align-items: center;
+    justify-content:center;
+    padding-left: 30%;
+    padding-right: 30%;
+
 }
 
-#headimg {
-    width: 400px;
-    float: left;
-    display: flex;
-    flex-direction: row;
+#section1 img{
+    width: 20vw;
+    margin:20px;
 }
 
-#headtext {
-    display: flex;
-    flex-direction: row;
-    font-size: 70pt;
-    height: 150px;
+#assemblyPics img{
+    width: 23%;
+    padding:5px;
+}
+
+#section2{
+    margin:70px;
     padding-left: 10%;
-    line-height: 100px;
+    padding-right: 10%;
 }
 
-#headsmalltext {
-    font-size: 15pt;
-    padding-left: 10%;
-    padding-top: 10%;
-    width: 450px;
-    height: 100px;
-}
 
-#section2 {
-    padding-left: 20%;
-    padding-right: 20%;
-}
+@media screen and (max-width: 800px) {
+    #section1{
+        display:flex;
+        align-items: left;
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    
+    }
+    #section1 img{
+        width: 100%;
+        margin:0px;
+        margin-bottom:10px;
 
-.heading2 {
-    display: flex;
-    font-size: 70pt;
-    height: 150px;
-}
+    }
+    #section2{
+        margin:0px;
+        margin-top:40px;
 
-.headsmalltext2 {
-    font-size: 15pt;
-}
-
-#assemblyimg {
-    height: 210px;
-    display: inline-block;
-}
-
-#section3 {
-    padding: 20%;
-    padding-top: 10%;
-}
-
-#campbelleimg {
-    height: 500px;
-    display: inline-block;
-}
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #assemblyPics img{
+        width: 40%;
+        padding:5px;
+        margin-bottom:10px;
+    }
+  }
