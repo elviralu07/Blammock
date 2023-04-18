@@ -71,3 +71,20 @@
 #color3{
   background-color: sienna;
 }
+
+@media screen and (max-width: 800px) {
+  #items {
+      flex-direction:column;
+      max-width: 800px;
+      align-items: center;
+
+  }
+  #main-display{
+    width: 100%;
+    
+  }
+  #add-to-cart-btn {
+    font-size: 3vw;
+      
+    }
+}
