@@ -75,3 +75,24 @@ li {
     display: flex;
 }
 
+@media only screen and (max-width: 1300px) {
+    .title {
+        font-size: 100pt;
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .title {
+        font-size: 90pt;
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .title {
+        font-size: 60pt;
+        padding: 5%;
+        padding-top: 15%;
+    }
+}
