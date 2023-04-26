@@ -49,3 +49,12 @@ li {
     text-align: center;
 }
 
+#sidebar {
+    background-color: red;
+    width: 500px;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: -500px;
+}

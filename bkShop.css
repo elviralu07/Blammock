@@ -73,16 +73,6 @@
   background-color: sienna;
 }
 
-.sidebar {
-  background-color: red;
-  width: 500px;
-  height: 100%;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: -500px;
-}
-
 @media screen and (max-width: 800px) {
   #items {
       flex-direction:column;
