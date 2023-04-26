@@ -1,12 +1,17 @@
 var cartItems = new Map();
 localStorage.setItem("cartItems", JSON.stringify(cartItems));
 var storedItems = JSON.parse(localStorage.getItem("cartItems"));
+var num = 0;
 
-const addItem = function() {
-    cartItems.set("item1", {
-        color: "red",
-        quantity: "3"
+var counter = 0;
+
+const addItem = function(userColor, userQuantity) {
+    counter++;
+    cartItems.set(counter, {
+        color: userColor,
+        quantity: userQuantity
     })
+    num = 0;
 }
 
 $(document).ready(function () {
@@ -21,7 +26,7 @@ $(document).ready(function () {
     })
 
     $("#cart-toggle").on("click", function() {
-        console.log("hello");
+        //getCart();
         $("#sidebar").css("right", "0px");
     })
 
@@ -31,7 +36,19 @@ $(document).ready(function () {
     })
 
     $("#add-to-cart-btn").on("click", function() {
-        addItem();
+        addItem("red", 3);
         console.log(cartItems);
+        //updateCart();
+    })
+
+    $(".quantity-counter").on("click", function() {
+        if(this.value == "-" && num > 0) {
+            num--;
+        } else if (this.value == "+") {
+            num++;
+        } else {
+            console.log("error")
+        }
+        $("#quantity").html(num);
     })
 })
