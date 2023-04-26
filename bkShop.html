@@ -2,18 +2,13 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>How It's Made</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
     <link rel="stylesheet" href="bkGlobal.css">
-    <link rel="stylesheet" href="bkGlobal.js">
     <link rel="stylesheet" href="bkShop.css">
-    <script src="http://code.jquery.com/jquery.js"></script>
-
 
 
 </head>
-
-
 <body>
     <div id="container">
         <div class="menu" id="header">
@@ -25,56 +20,13 @@
                 <li><a href="bkProduction.html">PRODUCTION</a></li>
                 <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
                 <li><a href="bkGuide.html">GUIDE</a></li>
+                <li><a id="cart-toggle">CART</a></li>
             </ul>
         </div>
-
-        <script>
-             $(document).ready(function() {
-            
-
-            $(".option").on("mouseover", function(){
-                $(".option").css("opacity", "0.5");
-                $(this).css("opacity", "1");
-            })
-        
-            $(".option").on("mouseout", function(){
-                $(".option").css("opacity", "1");
-            })
-
-            $(".option").on("click", function(){
-                $(".option").css("border", "0px");
-                $(this).css("border", "4px solid black");
-            })
-            
-            $("#color1").on("click", function (){
-                    $("#main-display").hide();
-                    $('#main-display').css('background-image', 'url("media/bkGreen.jpeg")');
-                    $("#main-display").fadeIn();
-                })
-            
-
-            $("#color2").on("click", function (){
-                    $("#main-display").hide();
-                    $('#main-display').css('background-image', 'url("media/bkBlue.jpeg")');
-                    $("#main-display").fadeIn();
-                })
-            
-                $("#color3").on("click", function (){
-                    $("#main-display").hide();
-                    $('#main-display').css('background-image', 'url("media/bkRed.jpeg")');
-                    $("#main-display").fadeIn();
-                })
-            });
-
-        
-        </script>
-
 
         <div class=title>SHOP</div>
 
         <div id="interface">
-
-            
             <div id = "items">
                 <div id="main-display"></div>
                 <div id="sidebar">
@@ -83,7 +35,7 @@
                         Shop our handmade blammock! The all-in-one blanket, ham... ok, you get it by now. just buy now! 
                     </div>
                     <div id="color-display">
-                        <div class="option" id="color1" ></div>
+                        <div class="option" id="color1"></div>
                         <div class="option" id="color2"></div>
                         <div class="option" id="color3"></div> 
                     </div>
@@ -97,20 +49,17 @@
 
 
         <div class="menu" id="footer">
-            <a id="TOP">TOP</a>
+            <a id="top">TOP</a>
             <ul class="nav">
                 <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
                 <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
             </ul>
         </div>
+
+        <div class="sidebar"></div>
     </div>
 
-            
-
-
-
-            
-
-    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bkGlobal.js"></script>
 </body>
 </html>
