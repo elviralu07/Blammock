@@ -4,10 +4,11 @@ const bmColors = {
     color3: ["Earth Brown", "sienna", "Red"]
 }
 
-var cartItems = new Map();
-localStorage.setItem("cartItems", JSON.stringify(cartItems));
-var storedItems = JSON.parse(localStorage.getItem("cartItems"));
-var counter = 0;
+console.log(JSON.parse(localStorage.getItem("cartItems")));
+var cartItems = new Map(JSON.parse(localStorage.getItem("cartItems"))) || new Map();
+localStorage.setItem("cartItems", JSON.stringify([...cartItems]));
+var counter = cartItems.size;
+console.log(counter)
 
 var qNum = 1;
 var color = "";
@@ -22,18 +23,22 @@ const addItem = function(userColor, userQuantity) {
         })
         qNum = 1;
         $("#quantity").html(qNum);
+
+        localStorage.setItem("cartItems", JSON.stringify([...cartItems]));
+
         resolve();
     })
 }
 
 const updateCart = function() {
-    cartCode = ""
+    console.log(cartItems);
+    cartCode = "";
     for(let i=1; i<=counter; i++) {
         cartCode += "<div class='inCartItem'>"
         cartCode += "<span>Blammock</span> <br />";
         cartCode += "<span>Color: " + cartItems.get(i).color[0] + "</span> <br />";
         cartCode += "<span>Quantity: " + cartItems.get(i).quantity + "</span> <br />";
-        cartCode += "</div>"
+        cartCode += "</div>";
     }
     $("#cart").html(cartCode);
 }
@@ -43,7 +48,7 @@ const emptyCart = function() {
 }
 
 $(document).ready(function() {
-    console.log("hello");
+    updateCart();
 
     $("#top").on("click", function() {
         window.scroll({
