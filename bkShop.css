@@ -1,10 +1,12 @@
 .title{
-  font-size:10vw;
+  font-size:14vw;
   text-align: center;
+  padding-top:50px;
 }
 .heading{
-  font-size:4vw;
+  font-size:6vw;
   line-height: 90%;
+  margin-bottom: 20px;
 }
 
 
@@ -27,7 +29,9 @@
 }
 
 #interface{
-  margin: 5% 10%;
+  margin-right:10%;
+  margin-left:10%;
+
 }
 
 #items{
@@ -43,7 +47,6 @@
   border: solid black 1px;
   margin: 50px;
   background-image: url('media/bkGreen.jpeg');
-  background-position: center;
   background-size: cover;
 }
 #color-display{

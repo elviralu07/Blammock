@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -6,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkInvestorPage.css">
+
 </head>
 
 <body>
@@ -21,23 +23,25 @@
                 <li><a href="bkGuide.html">GUIDE</a></li>
                 <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
             </ul>
+
+
+
         </div>
-        
         <div class=title>FOR INVESTORS</div>
 
         <div class=text>Relevant Information Dedicated Toward Investors & Funders of Blammock.</div>
-        
-        <br>
+            <br>
 
         <div>
             <canvas id="myChart"></canvas>
             <input oninput ="updateMin(this)" type = "range" id = "start" min="1" max = "21" value = "1">
             <input oninput ="updateMax(this)"type = "range" id = "end" min="1" max = "21" value = "21">
+
         </div>
           
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           
-        <script>
+          <script>
             const labels = ['Q1 2023', 'Q2 2023', 'Fall 2023'];
             const revdata = [0, 140, 280];
             const grossProfitData = [0, 200, 100];
@@ -106,32 +110,27 @@
                 start.max=range.value;
                 myChart.update();
             }
-        </script>
+          </script>
+           
 
 
 
 
-
-        <div id="investorInfo"></div>
-    
+        <div id="investorInfo">
             <div id=problemSolution>
-
                 <div class="categoryTitles">
                     PROBLEM & SOLUTION
                 </div>
-
                 <div class="categoryInfo">
-
                     <div class="infoImage1">
                         <img src="outdoors blammock.JPEG">
                     </div>
-
                     <div class="infoText">
                         We understand that our target customers are individuals who enjoy exploring and 
                         experiencing new things. They need products that can keep up with their active lifestyles 
                         and provide them with the freedom to move and explore without any limitations. Our backpack is designed
                         with these needs in mind, making it an essential tool for anyone who loves hiking, camping, or traveling.
-                            <br id="threeDots"> . . . </br>
+                            <br></br>
                         Blammock provides durable and versatile outdoor products that enhance the experience of our customers while promoting 
                         sustainability and ethical practices.
                     </div>
@@ -214,18 +213,53 @@
                 
                 </div>
             </div>
-
+            <br><br>
+            <div id=problemSolution>
+                <div class="categoryTitles">
+                    NOW... AND BEYOND
+                </div>
+                <div class="categoryInfo" id="nowBeyond">
+                    <div class="infoImage" id="blammockNoun">
+                        <img src="blammock noun.png">
+                        <br><br>
+                        <div id="blammockNounText">
+                            We are also exploring opening an in-house manufacturing hub right here at USC. With this 
+                            route, Blammock would hire USC tailors and seamstresses on our campus and train them to create
+                            the Blammock from start to finish. Not only would this allow us to completely cut down on
+                            shipping costs for USC students, but it would give us complete control over the assembly 
+                            process. Any potential production issues could be more easily resolved by the team. 
+                            It would also provide job opportunities for USC students and benefit the community at our
+                            university.
+                        </div>
+                    </div>
+                    <div class="infoText">
+                        Blammock is constantly evaluating our financial situation and making strategic plans 
+                        to ensure our long-term success. Currently, we are in a strong financial position, with
+                         no debt and no plans to sell the company.
+                        <br><br>
+                        However, as we continue to grow and expand our product line, we recognize the need 
+                        to invest in new technologies, materials, and manufacturing processes. To that end, 
+                        we plan on exploring potential deals with manufacturers that can help us increase our 
+                        production capacity and improve the quality of our products.
+                        <br><br>
+                        While we recognize that such deals may require a significant investment of up to thousands 
+                        of dollars on our part, we are confident that the long-term benefits will outweigh the 
+                        short-term costs. By partnering with a manufacturer, we can reduce our production costs, 
+                        increase our efficiency, and ultimately provide better value to our customers.
+                        
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
         <div class="menu" id="footer">
-
             <a id="top">TOP</a>
-
             <ul class="nav">
                 <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
                 <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
             </ul>
-
         </div>
-        
+        </div>
     </div>
 
 
