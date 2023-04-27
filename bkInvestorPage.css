@@ -1,0 +1,131 @@
+/* #problemSolution img{
+    object-fit:cover;
+    width:100%;
+    margin: 5px;
+    height: auto;
+    text-align: center
+} */
+
+#investorInfo{
+    padding-left: 15%;
+    padding-right: 15%;`
+    /* height: 5000px; */
+    /* border: solid red 1px; */
+
+}
+
+#problemSolution{ 
+    margin-top:10px;
+    margin-bottom:10px;
+    border: solid red 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    /* max-width: 900px; */
+    width:100%;
+}
+
+
+#teamDescriptions {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content:center ; */
+    /* column-gap: 30px; */
+    border: solid red 1px;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.memberDesc {
+    text-align: center;
+    border: solid red 1px;
+    /* display: flex; */
+
+}
+
+.text {
+    margin: auto;
+    /* text-align: center; */
+    width: 75%;
+    /* border: solid red 1px; */
+
+}
+
+.categoryTitles {
+    font-size: 4vw;
+    /* border: solid red 1px; */
+    width: 50%;
+    margin: auto;
+
+}
+
+.categoryInfo img {
+    object-fit:cover;
+    width: 30%;
+    margin: auto;
+    height: auto;
+    text-align: center
+}
+
+.categoryInfo {
+    font-size: 15pt;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: solid red 1px;
+}
+
+.title{
+    font-size:12vw;
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+
+}
+.heading{
+    font-size:8vw;
+    line-height: 90%;
+    margin-bottom: 10px;
+}
+
+.section{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+#fabricstorepic{
+    width:35%;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #TeamDescriptions {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: left;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 3vw;
+        
+      }
+  }

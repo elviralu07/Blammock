@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkProduction.css">
-
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bkProduction.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,7 @@
                 <li><a href="bkProduction.html">PRODUCTION</a></li>
                 <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
                 <li><a href="bkGuide.html">GUIDE</a></li>
+                <li><a href="bkInvestorPage.html">Investor Page</a></li>
             </ul>
         </div>
 
@@ -36,16 +38,37 @@
             <div class=heading>ASSEMBLY</div>
             <div class=text>Our team carefully measures, cuts, irons, and sews together the blammock and its accessories.</div>
 
-            <div id=assemblyPics>
-                <img src="media/IMG_2893.jpeg"/>
-                <img src="media/IMG_2891.jpeg"/>
-                <img src="media/IMG_2887.jpeg"/>
-                <img src="media/IMG_2892.jpeg"/>
+            <br>
+
+            <div id="gallery">
+                <div id="main">
+                    <div id="thumbnails">
+                        <img src="media/IMG_2893.jpeg" class="thumb" />
+                        <img src="media/IMG_2891.jpeg" class="thumb" />
+                        <img src="media/IMG_2887.jpeg" class="thumb" />
+                        <img src="media/IMG_2892.jpeg" class="thumb" />
+                    </div>
+                    <div id="view">
+                        <div id="viewcrop">
+                            <img src="media/IMG_2893.jpeg" id="viewphoto" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div id="section3">
+            <div class=heading>HOW TO USE THE BLAMMOCK</div>
+        </div>
+
+        <div class="video">
+            <video autoplay muted id="tutVideo">
+                <source src="media/tutorial.mp4" type="video/mp4" id="tutVideo"/>
+            </video>
+        </div>
+
         <div class="menu" id="footer">
-            <a id="TOP">TOP</a>
+            <a id="top">TOP</a>
             <ul class="nav">
                 <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
                 <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
@@ -54,6 +77,6 @@
     </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="trojanesports.js"></script>
+    <script src="bkGlobal.js"></script>
 </body>
 </html>
