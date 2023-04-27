@@ -26,8 +26,8 @@ const addItem = function(userColor, userQuantity) {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         calcTotal();
         resolve();
-    });
-};
+    })
+}
 
 const removeItem = function(index) {
     return new Promise(function(resolve, reject) {
@@ -36,9 +36,10 @@ const removeItem = function(index) {
 
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         calcTotal();
+        
         resolve();
-    });
-};
+    })
+}
 
 const updateCart = function() {
     cartCode = "";
@@ -56,11 +57,11 @@ const updateCart = function() {
         cartCode += "<a href='bkCheckout.html' id='checkout-bttn'>CHECKOUT</a>"
     }
     $("#cart").html(cartCode);
-};
+}
 
 const calcTotal = function() {
     subtotal = counter * 60;
-};
+}
 
 $(document).ready(function() {
     updateCart();
@@ -70,16 +71,16 @@ $(document).ready(function() {
             top: 0,
             left: 0,
             behavior: "smooth",
-        });
-    });
+        })
+    })
 
     $("#cart-toggle").on("click", function() {
         $("#sidebar").css("right", "0px");
-    });
+    })
 
     $("#cart-close").on("click", function() {
         $("#sidebar").css("right", "-500px");
-    });
+    })
 
     $("#add-to-cart-btn").on("click", function() {
         if (color == "") {
@@ -87,13 +88,13 @@ $(document).ready(function() {
         }
         addItem(color, qNum).then(function() {
             updateCart();
-        });
-    });
+        })
+    })
 
     $(".option-c").on("click", function() {
         const x = this.id;
         color = bmColors[x];
-    });
+    })
 
     $(".quantity-counter").on("click", function() {
         if (this.value == "-" && qNum > 1) {
@@ -101,15 +102,19 @@ $(document).ready(function() {
         } else if (this.value == "+") {
             qNum++;
         } else {
-            console.log("error");
+            console.log("error")
         }
-        $("#quantity").html(qNum);
-    });
+        $("#quantity").html(qNum)
+    })
 
     $(document).on("click", ".remove-item-bttn", function() {
         const index = $(this).data("index");
         removeItem(index).then(function() {
             updateCart();
-        });
-    });
-});
+        })
+    })
+
+    $("#email").on("click", function() {
+        sendEmail();
+    })
+})
