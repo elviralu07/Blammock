@@ -11,13 +11,14 @@
     padding-right: 15%;`
     /* height: 5000px; */
     /* border: solid red 1px; */
+    margin: auto;
 
 }
 
 #problemSolution{ 
     margin-top:10px;
     margin-bottom:10px;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -32,7 +33,7 @@
     /* flex-direction: row; */
     /* justify-content:center ; */
     /* column-gap: 30px; */
-    border: solid red 1px;
+    /* border: solid red 1px; */
     padding: 10px;
     width: 100%;
     margin: auto;
@@ -41,7 +42,7 @@
 
 .memberDesc {
     text-align: center;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     /* display: flex; */
 
 }
@@ -50,8 +51,15 @@
     margin: auto;
     /* text-align: center; */
     width: 75%;
+    text-align: center;
     /* border: solid red 1px; */
 
+}
+
+.infoText {
+    float: right;
+    width: 60%;
+    text-align: left;
 }
 
 .categoryTitles {
@@ -59,12 +67,18 @@
     /* border: solid red 1px; */
     width: 50%;
     margin: auto;
+    margin-bottom: 20px;
 
+}
+
+.infoImage1 {
+    float: left;
+    width: 80%;
 }
 
 .categoryInfo img {
     object-fit:cover;
-    width: 30%;
+    width: 50%;
     margin: auto;
     height: auto;
     text-align: center
@@ -75,7 +89,9 @@
     width: 80%;
     margin: auto;
     text-align: center;
-    border: solid red 1px;
+    /* border: solid red 1px; */
+    display: flex;
+    flex-direction: row;
 }
 
 .title{
