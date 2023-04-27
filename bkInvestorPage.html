@@ -33,31 +33,82 @@
 
         <div>
             <canvas id="myChart"></canvas>
+            <input oninput ="updateMin(this)" type = "range" id = "start" min="1" max = "21" value = "1">
+            <input oninput ="updateMax(this)"type = "range" id = "end" min="1" max = "21" value = "21">
+
         </div>
           
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           
           <script>
-            const ctx = document.getElementById('myChart');
+            const labels = ['Q1 2023', 'Q2 2023', 'Fall 2023'];
+            const revdata = [0, 140, 280];
+            const grossProfitData = [0, 200, 100];
+            const opProfitData = [0, 50, 30];
+
           
-            new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: ['Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023', 'Q1 2024', 'Q2 2024'],
-                datasets: [{
-                  label: '# of Votes',
-                  data: [0, 100],
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+            //Revenue, Gross Profits and Operating Profits
+            const data ={
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        data: revdata,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Gross Profits',
+                        data: grossProfitData,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Operating Profits',
+                        data: opProfitData,
+                        borderWidth: 1
+                    },
+                ]
+                
+            };
+            const config = { 
+                type: 'line',
+                data,
+                options:{
+                    scales:{
+                        y:{
+                            beginAtZero:true
+                        }
+                    }
                 }
-              }
-            });
+            };
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config 
+              );
+
+            const start = document.getElementById("start");
+            const end = document.getElementById("end")
+
+
+            function updateMin(range){
+                console.log(range.value);
+                const minValue = labels.slice(range.value - 1, end.Value); //endValue.value
+                const dbMinValue = revdata.slice(range.value - 1, end.Value); 
+                myChart.config.data.labels = minValue;
+                myChart.config.data.datasets[0].data = dbMinValue;
+                end.min=range.value;
+                myChart.update();
+
+            }
+
+            function updateMax(range){
+                console.log(range.value);
+                const maxValue = labels.slice(start.value -1, range.value); //endValue.value
+                const dbMaxValue = revdata.slice(start.value -1, range.value); 
+                myChart.config.data.labels = maxValue;
+                myChart.config.data.datasets[0].data = dbMaxValue;
+                start.max=range.value;
+                myChart.update();
+            }
           </script>
            
 
@@ -91,7 +142,9 @@
                 <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
             </ul>
         </div>
+        </div>
     </div>
+
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bkGlobal.js"></script>
