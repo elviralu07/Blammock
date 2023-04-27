@@ -2,7 +2,7 @@ const bmColors = {
     color1: ["Ivy Green", "darkolivegreen", "Green"],
     color2: ["Ocean Blue", "navy", "Blue"],
     color3: ["Earth Brown", "sienna", "Red"]
-};
+}
 
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 let counter = cartItems.length;
@@ -45,10 +45,10 @@ const updateCart = function() {
     cartCode = "";
     for (let i = 0; i < counter; i++) {
         cartCode += "<div class='in-cart-item'>";
-        cartCode += "<span>Blammock</span> <br />";
+        cartCode += "<span><strong>Blammock</strong></span> <br />";
         cartCode += "<span>Color: " + cartItems[i].color[0] + "</span> <br />";
         cartCode += "<span>Quantity: " + cartItems[i].quantity + "</span> <br />";
-        cartCode += "<span class='remove-item-bttn' data-index='" + i + "'>Remove X</span>";
+        cartCode += "<span class='remove-item-bttn' data-index='" + i + "'>X</span>";
         cartCode += "</div>";
     }
     if (cartCode == "") {
@@ -79,7 +79,7 @@ $(document).ready(function() {
     })
 
     $("#cart-close").on("click", function() {
-        $("#sidebar").css("right", "-500px");
+        $("#sidebar").css("right", "-400px");
     })
 
     $("#add-to-cart-btn").on("click", function() {
@@ -94,6 +94,7 @@ $(document).ready(function() {
     $(".option-c").on("click", function() {
         const x = this.id;
         color = bmColors[x];
+        $("#main-display").css("background-image", "url('media/bk" + color[2] + ".jpeg')");
     })
 
     $(".quantity-counter").on("click", function() {
@@ -112,9 +113,5 @@ $(document).ready(function() {
         removeItem(index).then(function() {
             updateCart();
         })
-    })
-
-    $("#email").on("click", function() {
-        sendEmail();
     })
 })
