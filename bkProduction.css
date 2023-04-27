@@ -17,7 +17,6 @@
     justify-content:center;
     padding-left: 30%;
     padding-right: 30%;
-
 }
 
 #section1 img{
@@ -36,8 +35,34 @@
     padding-right: 10%;
 }
 
+#section3{
+    margin:70px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+#tutVideo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 750px;
+    display: flex;
+}
+
 
 @media screen and (max-width: 800px) {
+    .heading {
+        padding-top: 50px;
+    }
+    
     #section1{
         display:flex;
         align-items: left;
@@ -46,12 +71,14 @@
         padding-right: 10%;
     
     }
+
     #section1 img{
         width: 100%;
         margin:0px;
         margin-bottom:10px;
 
     }
+
     #section2{
         margin:0px;
         margin-top:40px;
@@ -59,6 +86,15 @@
         padding-left: 10%;
         padding-right: 10%;
     }
+
+    #section3{
+        margin:0px;
+        margin-top:40px;
+
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     #assemblyPics img{
         width: 40%;
         padding:5px;
