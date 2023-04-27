@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blammock - Checkout</title>
+    <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
+    <link rel="stylesheet" href="bkGlobal.css">
+    <link rel="stylesheet" href="bkCheckout.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header" class="menu">
+            <a href="bkHome.html">BLAMMOCK</a>
+            <ul class="nav">
+                <li><a href="bkShop.html">SHOP</a></li>
+                <li><a href="bkAbout.html">ABOUT</a></li>
+                <li><a href="bkWebTeam.html">WEBSITE TEAM</a></li>
+                <li><a href="bkProduction.html">PRODUCTION</a></li>
+                <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
+                <li><a href="bkGuide.html">GUIDE</a></li>
+                <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
+                <li><a id="cart-toggle">CART</a></li>
+            </ul>
+        </div>
+
+        <div id="checkout-container">
+            <div id="user-info">
+                <div id="user-address">
+                    <label>E-Mail<br /><input id="e-mail" type="text" /></label><br />
+                    <input class="method" type="button" value="Shipping"/>
+                    <input class="method" type="button" value="Pick Up" />
+                    <div id="address">
+                        <label>Country/Region<br /><input type="text" value="United States"/></label><br />
+                        <div class="flex">
+                            <label>First Name<br /><input type="text" /></label><br />
+                            <label>Last Name<br /><input type="text" /></label><br />
+                        </div>
+                        <label>Street Address<br /><input type="text" /></label><br />
+                        <label>Address 2<br /><input type="text" placeholder="Apartment, Suite, etc." /></label><br />
+                        <div class="flex">
+                            <label>City<br /><input type="text" /></label><br />
+                            <label>State<br /><input type="text" /></label><br />
+                        </div>
+                        <label>Zip Code<br /><input type="text" /></label><br />
+                        <label>Mobile Number<br /><input type="text" placeholder="(XXX) XXX-XXXX" /></label><br />
+                    </div>
+                </div>
+                <div id="credit-card">
+                    <h1>Credit Card</h1>
+                    <input id="cc-num" type="text" placeholder="XXXX XXXX XXXX XXXX" />
+                    <input id="cc-expiration" type="text" placeholder="MM/YY" />
+                    <input id="cvv" type="text" />
+                </div>
+            </div>
+            <div id="order-summary">
+                <div id="receipt"></div>
+                <div id="purchase-bttn">Purchase</div>
+            </div>
+        </div>
+
+        <div id="footer" class="menu">
+            <a id="TOP">TOP</a>
+            <ul class="nav">
+                <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
+                <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
+            </ul>
+        </div>
+
+        <div id="sidebar">
+            <h1 id="cart-close">></h1>
+            <div id="cart">You have no items</div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bkGlobal.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
