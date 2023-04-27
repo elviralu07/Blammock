@@ -107,23 +107,26 @@
 }
 
 #blammockNoun img {
-    /* object-fit:cover;
+    object-fit:cover;
     width: 80%;
     margin: auto;
     height: auto;
-    text-align: left; */
+    text-align: ;
+    
 }
 
 #blammockNoun {
-    /* text-align: right;
-    border: solid red 1px; */
+    text-align: center;
+    /* border: solid red 1px; */
+    
 
 }
 
 #blammockNounText {
     text-align: left;
     /* border: solid red 1px; */
-    margin-right: 50px;
+    margin: auto;
+    width: 80%;
 
 }
 
