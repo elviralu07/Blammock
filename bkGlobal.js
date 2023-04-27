@@ -1,9 +1,16 @@
+const bmColors = {
+    color1: ["Ivy Green", "darkolivegreen", "Green"],
+    color2: ["Ocean Blue", "navy", "Blue"],
+    color3: ["Earth Brown", "sienna", "Red"]
+}
+
 var cartItems = new Map();
 localStorage.setItem("cartItems", JSON.stringify(cartItems));
 var storedItems = JSON.parse(localStorage.getItem("cartItems"));
-var num = 0;
-
 var counter = 0;
+
+var qNum = 1;
+var color = "";
 
 const addItem = function(userColor, userQuantity) {
     counter++;
@@ -11,10 +18,11 @@ const addItem = function(userColor, userQuantity) {
         color: userColor,
         quantity: userQuantity
     })
-    num = 0;
+    qNum = 1;
+    $("#quantity").html(qNum);
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     console.log("hello");
 
     $("#top").on("click", function() {
@@ -36,19 +44,25 @@ $(document).ready(function () {
     })
 
     $("#add-to-cart-btn").on("click", function() {
-        addItem("red", 3);
+        addItem(color, qNum);
         console.log(cartItems);
         //updateCart();
     })
 
+    $(".option-c").on("click", function() {
+        let x = this.id;
+        color = bmColors[x];
+        console.log(color[0]);
+    })
+
     $(".quantity-counter").on("click", function() {
-        if(this.value == "-" && num > 0) {
-            num--;
+        if(this.value == "-" && qNum > 1) {
+            qNum--;
         } else if (this.value == "+") {
-            num++;
+            qNum++;
         } else {
             console.log("error")
         }
-        $("#quantity").html(num);
+        $("#quantity").html(qNum);
     })
 })
