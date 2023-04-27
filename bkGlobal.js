@@ -11,15 +11,35 @@ var counter = 0;
 
 var qNum = 1;
 var color = "";
+var cartCode = "";
 
 const addItem = function(userColor, userQuantity) {
-    counter++;
-    cartItems.set(counter, {
-        color: userColor,
-        quantity: userQuantity
+    return new Promise(function(resolve, reject) {
+        counter++;
+        cartItems.set(counter, {
+            color: userColor,
+            quantity: userQuantity
+        })
+        qNum = 1;
+        $("#quantity").html(qNum);
+        resolve();
     })
-    qNum = 1;
-    $("#quantity").html(qNum);
+}
+
+const updateCart = function() {
+    cartCode = ""
+    for(let i=1; i<=counter; i++) {
+        cartCode += "<div class='inCartItem'>"
+        cartCode += "<span>Blammock</span> <br />";
+        cartCode += "<span>Color: " + cartItems.get(i).color[0] + "</span> <br />";
+        cartCode += "<span>Quantity: " + cartItems.get(i).quantity + "</span> <br />";
+        cartCode += "</div>"
+    }
+    $("#cart").html(cartCode);
+}
+
+const emptyCart = function() {
+    $("#cart").html("You have no items");
 }
 
 $(document).ready(function() {
@@ -34,19 +54,21 @@ $(document).ready(function() {
     })
 
     $("#cart-toggle").on("click", function() {
-        //getCart();
         $("#sidebar").css("right", "0px");
     })
 
     $("#cart-close").on("click", function() {
-        console.log("hello");
         $("#sidebar").css("right", "-500px");
     })
 
     $("#add-to-cart-btn").on("click", function() {
-        addItem(color, qNum);
+        if(color == "") {
+            color = bmColors["color1"];
+        }
+        addItem(color, qNum).then(function() {
+            updateCart();
+        })
         console.log(cartItems);
-        //updateCart();
     })
 
     $(".option-c").on("click", function() {
