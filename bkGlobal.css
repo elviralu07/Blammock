@@ -12,6 +12,10 @@ li {
     display: inline-block;
 }
 
+.flex {
+    display: flex;
+}
+
 .menu a:hover {
     text-decoration: underline;
 }
