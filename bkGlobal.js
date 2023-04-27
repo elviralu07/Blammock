@@ -1,3 +1,10 @@
+import {
+    isValid,
+    isExpirationDateValid,
+    isSecurityCodeValid,
+    getCreditCardNameByNumber
+} from 'creditcard.js';
+
 const bmColors = {
     color1: ["Ivy Green", "darkolivegreen", "Green"],
     color2: ["Ocean Blue", "navy", "Blue"],
@@ -43,7 +50,7 @@ const removeItem = function(index) {
 
 const updateCart = function() {
     cartCode = "";
-    for (let i = 0; i < counter; i++) {
+    for(let i = 0; i < counter; i++) {
         cartCode += "<div class='in-cart-item'>";
         cartCode += "<span><strong>Blammock</strong></span> <br />";
         cartCode += "<span>Color: " + cartItems[i].color[0] + "</span> <br />";
@@ -51,10 +58,10 @@ const updateCart = function() {
         cartCode += "<span class='remove-item-bttn' data-index='" + i + "'>X</span>";
         cartCode += "</div>";
     }
-    if (cartCode == "") {
+    if(cartCode == "") {
         cartCode = "Your cart is empty";
     } else {
-        cartCode += "<a href='bkCheckout.html' id='checkout-bttn'>CHECKOUT</a>"
+        cartCode += "<br /><hr> <a href='bkCheckout.html' id='checkout-bttn'>CHECKOUT</a> <br /><br /><br />"
     }
     $("#cart").html(cartCode);
 }
@@ -98,9 +105,9 @@ $(document).ready(function() {
     })
 
     $(".quantity-counter").on("click", function() {
-        if (this.value == "-" && qNum > 1) {
+        if(this.value == "-" && qNum > 1) {
             qNum--;
-        } else if (this.value == "+") {
+        } else if(this.value == "+") {
             qNum++;
         } else {
             console.log("error")

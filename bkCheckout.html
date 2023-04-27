@@ -25,9 +25,27 @@
             </ul>
         </div>
 
-        <div id="opening">BLAMMOCK</div>
-
-        <div id="purchase-bttn">buy me</div>
+        <div id="checkout-container">
+            <div id="user-info">
+                <div id="user-address">
+                    <input id="e-mail" type="text" />
+                    <input class="method" type="button" value="Shipping"/>
+                    <input class="method" type="button" value="Pick Up" />
+                    <div id="address">
+                        <input type="text"/>
+                    </div>
+                </div>
+                <div id="credit-card">
+                    <input id="cc-num" type="text" placeholder="XXXX XXXX XXXX XXXX" />
+                    <input id="cc-expiration" type="text" placeholder="MM/YY" />
+                    <input id="cvv" type="text" />
+                </div>
+            </div>
+            <div id="order-summary">
+                <div id="receipt"></div>
+                <div id="purchase-bttn">Purchase</div>
+            </div>
+        </div>
 
         <div id="footer" class="menu">
             <a id="TOP">TOP</a>
