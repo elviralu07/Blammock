@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -7,7 +6,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkInvestorPage.css">
-
 </head>
 
 <body>
@@ -23,25 +21,23 @@
                 <li><a href="bkGuide.html">GUIDE</a></li>
                 <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
             </ul>
-
-
-
         </div>
+        
         <div class=title>FOR INVESTORS</div>
 
         <div class=text>Relevant Information Dedicated Toward Investors & Funders of Blammock.</div>
-            <br>
+        
+        <br>
 
         <div>
             <canvas id="myChart"></canvas>
             <input oninput ="updateMin(this)" type = "range" id = "start" min="1" max = "21" value = "1">
             <input oninput ="updateMax(this)"type = "range" id = "end" min="1" max = "21" value = "21">
-
         </div>
           
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           
-          <script>
+        <script>
             const labels = ['Q1 2023', 'Q2 2023', 'Fall 2023'];
             const revdata = [0, 140, 280];
             const grossProfitData = [0, 200, 100];
@@ -110,43 +106,53 @@
                 start.max=range.value;
                 myChart.update();
             }
-          </script>
-           
-
-
+        </script>
 
 
         <div id="investorInfo"></div>
     
             <div id=problemSolution>
+
                 <div class="categoryTitles">
                     PROBLEM & SOLUTION
                 </div>
+
                 <div class="categoryInfo">
+
                     <div class="infoImage1">
                         <img src="outdoors blammock.JPEG">
                     </div>
+
                     <div class="infoText">
                         We understand that our target customers are individuals who enjoy exploring and 
                         experiencing new things. They need products that can keep up with their active lifestyles 
                         and provide them with the freedom to move and explore without any limitations. Our backpack is designed
                         with these needs in mind, making it an essential tool for anyone who loves hiking, camping, or traveling.
-                            <br id="threeDots"> . . . </br>
+                        
+                        <br id="threeDots"> . . . </br>
+                        
                         Blammock provides durable and versatile outdoor products that enhance the experience of our customers while promoting 
                         sustainability and ethical practices.
                     </div>
 
                 </div>
             </div>
+        </div>
+
+
+        </br>
 
         <div class="menu" id="footer">
+
             <a id="top">TOP</a>
+
             <ul class="nav">
                 <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
                 <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
             </ul>
+
         </div>
-        </div>
+        
     </div>
 
 
