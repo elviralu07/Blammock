@@ -1,32 +1,38 @@
-#TeamPics img{
+/* #problemSolution img{
     object-fit:cover;
     width:100%;
     margin: 5px;
     height: auto;
     text-align: center
+} */
+
+#investorInfo{
+    padding-left: 15%;
+    padding-right: 15%;`
+    /* height: 5000px; */
+    /* border: solid red 1px; */
+
 }
-#TeamPics{ 
+
+#problemSolution{ 
     margin-top:10px;
     margin-bottom:10px;
-    /* border: solid red 1px; */
+    border: solid red 1px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     /* max-width: 900px; */
     width:100%;
 }
-#TheTeam{
-    padding-left: 15%;
-    padding-right: 15%;
 
-}
 
 #teamDescriptions {
     display: flex;
-    flex-direction: row;
-    justify-content:center ;
-    column-gap: 30px;
-    /* border: solid red 1px; */
+    /* flex-direction: row; */
+    /* justify-content:center ; */
+    /* column-gap: 30px; */
+    border: solid red 1px;
     padding: 10px;
     width: 100%;
     margin: auto;
@@ -35,30 +41,41 @@
 
 .memberDesc {
     text-align: center;
-    /* border: solid red 1px; */
+    border: solid red 1px;
     /* display: flex; */
 
 }
 
-#descRor {
-    /* padding-right: 20px; */
-    margin-right: 40px;
-    margin-left: 30px;
-    /* margin-left: -20px; */
+.text {
+    margin: auto;
+    /* text-align: center; */
+    width: 75%;
+    /* border: solid red 1px; */
+
 }
 
-#descKM {
-    margin-left: 90px;
-    margin-right: 40px;
+.categoryTitles {
+    font-size: 4vw;
+    /* border: solid red 1px; */
+    width: 50%;
+    margin: auto;
+
 }
 
-#descDM {
-    margin-left: 40px;
+.categoryInfo img {
+    object-fit:cover;
+    width: 30%;
+    margin: auto;
+    height: auto;
+    text-align: center
 }
 
-#descEl {
-    margin-left: 50px;
-    margin-right: -20px;
+.categoryInfo {
+    font-size: 15pt;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: solid red 1px;
 }
 
 .title{
