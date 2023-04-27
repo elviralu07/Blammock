@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Blammock Website Team</title>
+    <title>FOR INVESTORS</title>
     <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkInvestorPage.css">
@@ -22,8 +22,43 @@
                 <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
                 <li><a href="bkGuide.html">GUIDE</a></li>
             </ul>
+
+
+
         </div>
-        <div class=title>WEBSITE TEAM</div>
+        <div class=title>FOR INVESTORS</div>
+        <div>
+            <canvas id="myChart"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+          
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023', 'Q1 2024', 'Q2 2024'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [0, 100],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+           
+
+
+
 
         <div id="TheTeam">
 
