@@ -57,6 +57,67 @@
     display: flex;
 }
 
+#gallery {
+    transition: all 0.5s ease-in-out;
+    height: fit-content;
+    width: 100%;
+    padding: 2.5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bfbfbf;
+}
+
+#main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+#thumbnails {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    overflow: auto;
+    max-height: 102vh;
+    background-color: #bfbfbf;
+}
+
+#thumbnails img {
+    width: 95%;
+    padding: 1%;
+    display: block;
+    margin: auto;
+}
+
+.thumb {
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000000;
+}
+
+#view {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 65%;
+    max-height: 110vh;
+    background-color: #ffffff;
+}
+
+#viewcrop {
+    padding: 10px;
+}
+
+#viewphoto {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 800px) {
     .heading {
