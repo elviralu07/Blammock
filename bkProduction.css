@@ -67,7 +67,7 @@
     object-position: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: #bfbfbf;
+    background-color: #dedede;
 }
 
 #main {
@@ -83,7 +83,7 @@
     width: 30%;
     overflow: auto;
     max-height: 102vh;
-    background-color: #bfbfbf;
+    background-color: #dedede;
 }
 
 #thumbnails img {
