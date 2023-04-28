@@ -1,16 +1,22 @@
-/* #problemSolution img{
-    object-fit:cover;
-    width:100%;
-    margin: 5px;
-    height: auto;
-    text-align: center
-} */
+#preloaderDiv {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    border: solid red 1px;
+    text-align: center;
+    background-color: white;
+}
+
+#preloader {
+    width: 90%;
+    margin: auto;
+}
 
 #investorInfo{
     padding-left: 15%;
     padding-right: 15%;`
     /* height: 5000px; */
-    border: solid red 1px;
+    /* border: solid red 1px; */
     margin: auto;
 
 }
