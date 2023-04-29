@@ -8,12 +8,35 @@
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkInvestorPage.css">
 
-    
+    <script src="http://iyawebdev.com/jqm.js"></script>
+    <script src="http://iyawebdev.com/jqui.min.js"></script>
+    <script>
+        // this is for the page loading animation
+        var preloader = function(){ 
+            $("#preloaderGif").delay(6000)
+            .animate( {"opacity": "0px"}, 1000 );
 
+            $("#preloaderDiv").delay(6000)
+            .animate( {"opacity": "0px", "width": "0%", "height": "1%", "left": "50%", "top": "50%"}, 1000 );
+          
+        }
+
+        $(document).ready(function (){
+            preloader();
+
+        })
+        
+    
+    
+    </script>
 </head>
 
 <body>
-
+    <div id="preloaderDiv">
+        <div id="preloaderGif">
+            <img  id="preloader" src="Blammock Motion Graphic 1.gif">
+        </div>
+    </div>
 
 
     <div id="container">
