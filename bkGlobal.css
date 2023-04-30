@@ -16,6 +16,11 @@ li {
     display: flex;
 }
 
+.flex-btwn {
+    display: flex;
+    justify-content: space-between;
+}
+
 .menu a:hover {
     text-decoration: underline;
 }
