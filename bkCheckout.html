@@ -25,47 +25,57 @@
             </ul>
         </div>
 
-        <div id="checkout-container">
-            <div id="user-info">
-                <div id="user-address">
-                    <label>E-Mail<br /><input id="e-mail" type="text" required/></label><br /><br />
-                    <input class="method" type="button" value="Shipping" />
-                    <input class="method" type="button" value="Pick Up" />
-                    <hr>
-                    <div class="container">
-                        <div id="shipping">
-                            <label>Country/Region<br /><input type="text" value="United States" required/></label><br />
-                            <div class="flex">
-                                <label>First Name<br /><input type="text" required/></label><br />
-                                <label>Last Name<br /><input type="text" required/></label><br />
+        <div class="grid">
+            <div id="checkout-container">
+                <div id="user-info">
+                    <div id="user-address">
+                        <label>E-Mail<br /><input id="e-mail" type="text" required/></label><br /><br />
+                        <input class="method" type="button" value="Shipping" />
+                        <input class="method" type="button" value="Pick Up" />
+                        <hr>
+                        <div class="grid">
+                            <div id="shipping">
+                                <label>Country/Region<br /><input type="text" value="United States" required/></label><br />
+                                <div class="flex">
+                                    <label>First Name<br /><input type="text" required/></label><br />
+                                    <label>Last Name<br /><input type="text" required/></label><br />
+                                </div>
+                                <label>Street Address<br /><input type="text" required/></label><br />
+                                <label>Address 2<br /><input type="text" placeholder="Apartment, Suite, etc." /></label><br />
+                                <div class="flex">
+                                    <label>City<br /><input type="text" required/></label><br />
+                                    <label>State<br /><input type="text" required/></label><br />
+                                </div>
+                                <label>Zip Code<br /><input type="text" required/></label><br />
+                                <label>Mobile Number<br /><input type="text" placeholder="(XXX) XXX-XXXX" required/></label><br />
                             </div>
-                            <label>Street Address<br /><input type="text" required/></label><br />
-                            <label>Address 2<br /><input type="text" placeholder="Apartment, Suite, etc." /></label><br />
-                            <div class="flex">
-                                <label>City<br /><input type="text" required/></label><br />
-                                <label>State<br /><input type="text" required/></label><br />
+                            <div id="pickup">
+                                <h3>You will pick up your order at</h3>
+                                <p>3780 Watt Way, Los Angeles, CA 90089</p>
                             </div>
-                            <label>Zip Code<br /><input type="text" required/></label><br />
-                            <label>Mobile Number<br /><input type="text" placeholder="(XXX) XXX-XXXX" required/></label><br />
-                        </div>
-                        <div id="pickup">
-                            <h3>You will pick up your order at</h3>
-                            <p>3780 Watt Way, Los Angeles, CA 90089</p>
                         </div>
                     </div>
+                    <hr>
+                    <div id="credit-card">
+                        <span>Credit Card</span>
+                        <br>
+                        <input id="cc-num" type="text" placeholder="XXXX XXXX XXXX XXXX" required/>
+                        <input id="cc-expiration" type="text" placeholder="MM/YY" required/>
+                        <input id="cvv" type="text" placeholder="CVV" required/>
+                    </div>
                 </div>
-                <hr>
-                <div id="credit-card">
-                    <span>Credit Card</span>
-                    <br>
-                    <input id="cc-num" type="text" placeholder="XXXX XXXX XXXX XXXX" required/>
-                    <input id="cc-expiration" type="text" placeholder="MM/YY" required/>
-                    <input id="cvv" type="text" placeholder="CVV" required/>
+                <div id="order-summary">
+                    <div id="summary"></div>
+                    <div id="purchase-bttn">PURCHASE</div>
                 </div>
             </div>
-            <div id="order-summary">
+
+            <div id="loading"></div>
+    
+            <div id="order-confirmation">
+                <h1>Order Confirmed</h1>
+                <hr>
                 <div id="receipt"></div>
-                <div id="purchase-bttn">PURCHASE</div>
             </div>
         </div>
 
