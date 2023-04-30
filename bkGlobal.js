@@ -136,7 +136,7 @@ const checkCard = function() {
 }
 
 const updateReceipt = function() {
-    let receiptCode = "<h2>BLAMMOCK</h2>";
+    let receiptCode = "<h2 class='text-center'>BLAMMOCK</h2>";
 
     for (let i = 0; i < counter; i++) {
         receiptCode += "<div class='receipt-item flex-btwn'>";
@@ -145,30 +145,47 @@ const updateReceipt = function() {
         receiptCode += "</div>";
     }
 
-    receiptCode += "<div class='text-right'>";
-    receiptCode += "<span>SUBTOTAL &nbsp; &nbsp;</span>";
-    receiptCode += "<span>$" + parseFloat(subtotal).toFixed(2) + "</span>";
+    receiptCode += "<div class='receipt-grid'>";
+    receiptCode += "<span class='text-right'>SUBTOTAL</span>";
+    receiptCode += "<span class='money-column text-right'>$" + parseFloat(subtotal).toFixed(2) + "</span>";
     receiptCode += "</div>";
 
-    receiptCode += "<div class='text-right'>";
-    receiptCode += "<span>TAX 9.5% &nbsp; &nbsp; </span>";
-    receiptCode += "<span>$" + parseFloat(subtotal * 0.095).toFixed(2) + "</span>";
+    receiptCode += "<div class='receipt-grid'>";
+    receiptCode += "<span class='text-right'>TAX 9.5%</span>";
+    receiptCode += "<span class='money-column text-right'>$" + parseFloat(subtotal * 0.095).toFixed(2) + "</span>";
     receiptCode += "</div>";
 
-    receiptCode += "<div class='text-right'>";
+    receiptCode += "<div class='receipt-grid'>";
     if(shipping) {
-        receiptCode += "<span>SHIPPING &nbsp; &nbsp; </span>";
-        receiptCode += "<span>$15.00</span>";
+        receiptCode += "<span class='text-right'>SHIPPING</span>";
+        receiptCode += "<span class='money-column text-right'>$15.00</span>";
     } else {
-        receiptCode += "<span>PICK UP &nbsp; &nbsp; &nbsp;</span>";
-        receiptCode += "<span>$0.00</span>";
+        receiptCode += "<span class='text-right'>PICK UP</span>";
+        receiptCode += "<span class='money-column text-right'>$0.00</span>";
     }
     receiptCode += "</div>";
 
-    receiptCode += "<div class='text-right'>";
-    receiptCode += "<span>TOTAL &nbsp; &nbsp;</span>";
-    receiptCode += "<span>$" + parseFloat(total).toFixed(2) + "</span>";
+    receiptCode += "<div class='receipt-grid''>";
+    receiptCode += "<span class='text-right'>TOTAL</span>";
+    receiptCode += "<span class='money-column text-right'>$" + parseFloat(total).toFixed(2) + "</span>";
     receiptCode += "</div>";
+
+    receiptCode += "<div class='receipt-grid''>";
+    receiptCode += "<span class='text-right'>VISA TEND</span>";
+    receiptCode += "<span class='money-column text-right'>$" + parseFloat(total).toFixed(2) + "</span>";
+    receiptCode += "</div>";
+
+    receiptCode += "<br />";
+    let timestamp = new Date();
+    receiptCode += "<div class='text-center'><span>" 
+                    + ("0" + (timestamp.getMonth() + 1)).slice(-2)  + "/"
+                    + ("0" + timestamp.getDate()).slice(-2) + "/"
+                    + timestamp.getFullYear() + "&nbsp; &nbsp; "
+                    + ("0" + timestamp.getHours()).slice(-2) + ":"
+                    + ("0" + timestamp.getMinutes()).slice(-2) + ":"
+                    + ("0" + timestamp.getSeconds()).slice(-2)
+                    + "</span></div>";
+    receiptCode += "<div class='text-center'><span># ITEMS SOLD " + counter + "</span></div>";
 
     $("#receipt").html(receiptCode);
 }

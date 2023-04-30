@@ -69,8 +69,23 @@ input {
     width: 300px;
 }
 
+#title {
+    font-size: 24pt;
+    font-weight: 400;
+    text-align: center;
+}
+
 #receipt {
     font-family: "Monocraft", "loos-normal", serif;
+}
+
+.receipt-grid {
+    display: grid;
+    grid-template-columns: 180px 120px;
+}
+
+.money-column {
+    grid-column-start: 2;
 }
 
 #loading {
