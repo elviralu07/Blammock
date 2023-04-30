@@ -96,3 +96,7 @@ input {
     height: 99vh;
     overflow: hidden;
 }
+
+#loading img {
+    width: 100%;
+}

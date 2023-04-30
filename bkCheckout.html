@@ -29,7 +29,7 @@
             <div id="checkout-container">
                 <div id="user-info">
                     <div id="user-address">
-                        <label>E-Mail<br /><input id="e-mail" type="text" required/></label><br /><br />
+                        <label>E-Mail<br /><input id="email" type="text" required/></label><br /><br />
                         <input class="method" type="button" value="Shipping" />
                         <input class="method" type="button" value="Pick Up" />
                         <hr>
@@ -47,7 +47,7 @@
                                     <label>State<br /><input type="text" required/></label><br />
                                 </div>
                                 <label>Zip Code<br /><input type="text" required/></label><br />
-                                <label>Mobile Number<br /><input type="text" placeholder="(XXX) XXX-XXXX" required/></label><br />
+                                <label>Mobile Number<br /><input id="phone" type="text" placeholder="(XXX) XXX-XXXX" required/></label><br />
                             </div>
                             <div id="pickup">
                                 <h3>You will pick up your order at</h3>
@@ -60,8 +60,8 @@
                         <span>Credit Card</span>
                         <br>
                         <input id="cc-num" type="text" placeholder="XXXX XXXX XXXX XXXX" required/>
-                        <input id="cc-expiration" type="text" placeholder="MM/YY" required/>
-                        <input id="cvv" type="text" placeholder="CVV" required/>
+                        <input id="cc-exp" type="text" placeholder="MM/YY" required/>
+                        <input id="cc-cvv" type="text" placeholder="CVV" required/>
                     </div>
                 </div>
                 <div id="order-summary">
@@ -95,7 +95,6 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bkGlobal.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

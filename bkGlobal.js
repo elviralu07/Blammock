@@ -1,14 +1,15 @@
-// import {
-//     isValid,
-//     isExpirationDateValid,
-//     isSecurityCodeValid,
-//     getCreditCardNameByNumber
-// } from 'creditcard.js';
-
 const bmColors = {
     color1: ["Ivy Green", "darkolivegreen", "Green", "G"],
     color2: ["Ocean Blue", "navy", "Blue", "B"],
     color3: ["Earth Brown", "sienna", "Red", "R"]
+}
+
+// The RegEx are by Conta Azul
+const creditCards = {
+    amex: ["Amex", /^3[47][0-9]{13}$/, 4],
+    discover: ["Discover", /^6(?:011|5[0-9]{2}|4[4-9][0-9]{1}|(22(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[01][0-9]|92[0-5]$)[0-9]{10}$))[0-9]{12}$/, 4],
+    mastercard: ["Mastercard", /^(603136|603689|608619|606200|603326|605919|608783|607998|603690|604891|603600|603134|608718|603680|608710|604998)|(5[1-5][0-9]{14}|2221[0-9]{12}|222[2-9][0-9]{12}|22[3-9][0-9]{13}|2[3-6][0-9]{14}|27[01][0-9]{13}|2720[0-9]{12})$/, 3],
+    visa: ["Visa", /^4[0-9]{12}(?:[0-9]{3})?$/, 3]
 }
 
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -19,6 +20,7 @@ let color = "";
 let subtotal = 0;
 let total = 0;
 let shipping = true;
+let cardName = "";
 
 const addItem = function(userColor, userQuantity) {
     return new Promise(function(resolve, reject) {
@@ -124,15 +126,45 @@ const calcTotal = function() {
 }
 
 const checkEmail = function() {
-    return true;
+    const emailInput = $("#email").val();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(emailRegex.test(emailInput)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 const checkPhone = function() {
-    return true;
+    if(!shipping) {
+        return true;
+    }
+
+    const phone = $("#phone").val();
+    const phoneRegex = /^[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+
+    if (phoneRegex.test(phone)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 const checkCard = function() {
-    return true;
+    for(const key in creditCards) {
+        const cardNum = $("#cc-num").val();
+        const numRegex = (creditCards[key][1]);
+        const cardExp = $("#cc-exp").val();
+        const expRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+        const cardCVV = $("#cc-cvv").val().toString();
+
+        if(numRegex.test(cardNum) && expRegex.test(cardExp) && (cardCVV.length == creditCards[key][2])) {
+            cardName = (creditCards[key][0]).toUpperCase();
+            return true;
+        }
+    }
+    return false;
 }
 
 const updateReceipt = function() {
@@ -171,7 +203,7 @@ const updateReceipt = function() {
     receiptCode += "</div>";
 
     receiptCode += "<div class='receipt-grid''>";
-    receiptCode += "<span class='text-right'>VISA TEND</span>";
+    receiptCode += "<span class='text-right'>" + cardName + " TEND</span>";
     receiptCode += "<span class='money-column text-right'>$" + parseFloat(total).toFixed(2) + "</span>";
     receiptCode += "</div>";
 
@@ -252,7 +284,7 @@ $(document).ready(function() {
         } else if(this.value == "+") {
             qNum++;
         } else {
-            console.log("error")
+            console.log("error");
         }
         $("#quantity").html(qNum)
     })
@@ -280,33 +312,32 @@ $(document).ready(function() {
     })
 
     $("#loading").hide();
-    $("#checkout-container").hide();
     updateReceipt();
-    // $("#order-confirmation").hide();
-    // $("#purchase-bttn").on("click", function() {
-    //     let allFilled = true;
-    //     const userInfo = document.querySelectorAll("[required]");
+    $("#order-confirmation").hide();
+    $("#purchase-bttn").on("click", function() {
+        let allFilled = true;
+        const userInfo = document.querySelectorAll("[required]");
 
-    //     userInfo.forEach((i) => {
-    //         if(i.value == "") {
-    //             if(shipping) {
-    //                 allFilled = true;
-    //             } else if(i.parentNode.parentNode.id != "shipping" && i.parentNode.parentNode.parentNode.id != "shipping") {
-    //                     allFilled = true;
-    //                 }
-    //             }
-    //         }
-    //     )
+        userInfo.forEach((i) => {
+            if(i.value == "") {
+                if(shipping) {
+                    allFilled = false;
+                } else if(i.parentNode.parentNode.id != "shipping" && i.parentNode.parentNode.parentNode.id != "shipping") {
+                        allFilled = false;
+                    }
+                }
+            }
+        )
 
-    //     if(allFilled && checkEmail() && checkPhone() && checkCard()) {
-    //         updateReceipt();
-    //         $("#checkout-container").fadeOut();
-    //         $("#loading").html("<img src='media/Blammock Motion Graphic 1.gif'>");
-    //         $("#loading").fadeIn();
-    //         $("#loading").delay(5000).fadeOut();
-    //         $("#order-confirmation").delay(5000).fadeIn();
-    //     } else {
-    //         alert("Please ensure you filled out all boxes correctly.");
-    //     }
-    // })
+        if(allFilled && checkEmail() && checkPhone() && checkCard()) {
+            updateReceipt();
+            $("#checkout-container").fadeOut();
+            $("#loading").html("<img src='media/Blammock Motion Graphic 1.gif'>");
+            $("#loading").fadeIn();
+            $("#loading").delay(5000).fadeOut();
+            $("#order-confirmation").delay(5000).fadeIn();
+        } else {
+            alert("Please ensure you filled out all boxes correctly.");
+        }
+    })
 })
