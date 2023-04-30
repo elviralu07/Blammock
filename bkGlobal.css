@@ -92,6 +92,10 @@ li {
     transition: 0.5s;
 }
 
+#sidebar hr {
+    border-color: #000000;
+}
+
 .in-cart-item {
     border: solid 1px #000000;
     margin: 10px;
@@ -103,7 +107,4 @@ li {
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-#checkout-bttn {
 }

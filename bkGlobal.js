@@ -34,6 +34,7 @@ const addItem = function(userColor, userQuantity) {
 
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         calcTotal();
+
         resolve();
     })
 }
@@ -69,6 +70,12 @@ const updateCart = function() {
     }
 
     $("#cart").html(cartCode);
+}
+
+const clearCart = function() {
+    for(let i=0; i<counter; i++) {
+        removeItem(i);
+    }
 }
 
 const updateSummary = function() {
@@ -346,6 +353,9 @@ $(document).ready(function() {
 
         if(allFilled && checkEmail() && checkPhone() && checkCard()) {
             updateReceipt();
+            clearCart();
+            $("#cart").html("Your cart is empty.");
+
             $("#checkout-container").fadeOut();
             $("#loading").html("<img src='media/Blammock Motion Graphic 1.gif'>");
             $("#loading").fadeIn();
