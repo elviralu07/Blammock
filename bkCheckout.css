@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Monocraft";
+    src: url('Monocraft.otf');
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#header {
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+#checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    margin: 70px 10%;
+    font-size: 12pt;
+}
+
+.method {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    padding: 15px 40px;
+    font-size: 12pt;
+    transition: 0.5s;
+}
+
+.method:hover {
+    background-color: #e0e0e0;
+}
+
+#shipping, #pickup,
+#checkout-container, #order-confirmation, #loading {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+#summary {
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+.summary-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#purchase-bttn {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    font-size: 16pt;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#purchase-bttn:hover {
+    background-color: #393939;
+}
+
+#order-confirmation {
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
+#title {
+    background-color: #FFFFFF;
+    font-size: 36pt;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+    z-index: 1;
+}
+
+#receipt {
+    width: 350px;
+    font-family: "Monocraft", "loos-normal", serif;
+    padding: 50px 25px 80px 25px;
+    border: 1px solid #000000;
+    z-index: -1;
+    margin-bottom: 80px;
+    position: relative;
+    top: -200px;
+}
+
+.receipt-grid {
+    display: grid;
+    grid-template-columns: 180px 170px;
+}
+
+.money-column {
+    grid-column-start: 2;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 99vw;
+    height: 99vh;
+    overflow: hidden;
+}
+
+#loading img {
+    width: 100%;
+}

@@ -8,10 +8,39 @@
     <link rel="stylesheet" href="bkGlobal.css">
     <link rel="stylesheet" href="bkInvestorPage.css">
 
+    <script src="http://iyawebdev.com/jqm.js"></script>
+    <script src="http://iyawebdev.com/jqui.min.js"></script>
+    <script>
+        // this is for the page loading animation
+        var preloader = function(){ 
+            $("#preloaderGif").delay(6000)
+            .animate( {"opacity": "0px"}, 1000 );
+
+            $("#preloaderDiv").delay(6000)
+            .animate( {"opacity": "0px", "width": "0%", "height": "1%", "left": "50%", "top": "50%"}, 1000 );
+          
+        }
+
+        $(document).ready(function (){
+            preloader();
+
+        })
+        
+    
+    
+    </script>
 </head>
 
 <body>
+    <div id="preloaderDiv">
+        <div id="preloaderGif">
+            <img  id="preloader" src="media/Blammock Motion Graphic 1.gif">
+        </div>
+    </div>
+
+
     <div id="container">
+        
         <div class="menu" id="header">
             <a href="bkHome.html">BLAMMOCK</a>
             <ul class="nav">
@@ -30,6 +59,7 @@
         <div class=title>FOR INVESTORS</div>
 
         <div class=text>Relevant Information Dedicated Toward Investors & Funders of Blammock.</div>
+            <br>
 
         <div>
             <canvas id="myChart"></canvas>
@@ -115,26 +145,140 @@
 
 
 
-        <div id="investorInfo"></div>
-    
+        <div id="investorInfo">
             <div id=problemSolution>
                 <div class="categoryTitles">
                     PROBLEM & SOLUTION
                 </div>
                 <div class="categoryInfo">
-                    We understand that our target customers are individuals who enjoy exploring and 
-                    experiencing new things. They need products that can keep up with their active lifestyles 
-                    and provide them with the freedom to move and explore without any limitations. Our backpack is designed
-                    with these needs in mind, making it an essential tool for anyone who loves hiking, camping, or traveling.
-                    <br><br>
-                        <img src="outdoors blammock.JPEG">
-                    Blammock provides durable and versatile outdoor products that enhance the experience of our customers while promoting 
-                    sustainability and ethical practices.
-
-
+                    <div class="infoImage1">
+                        <img src="media/outdoors blammock.JPEG">
+                    </div>
+                    <div class="infoText">
+                        We understand that our target customers are individuals who enjoy exploring and 
+                        experiencing new things. They need products that can keep up with their active lifestyles 
+                        and provide them with the freedom to move and explore without any limitations. Our backpack is designed
+                        with these needs in mind, making it an essential tool for anyone who loves hiking, camping, or traveling.
+                            <br></br>
+                        Blammock provides durable and versatile outdoor products that enhance the experience of our customers while promoting 
+                        sustainability and ethical practices.
+                    </div>
                 </div>
             </div>
+            <br><br>
+            <div id=problemSolution>
+                <div class="categoryTitles">
+                        MARKETPLACE
+                </div>
+                <div class="categoryInfo">
+                    <div class="infoText">
+                        As a new player in the outdoor industry, we recognize that we are entering a highly competitive market. 
+                        Our main competitors include well-established outdoor brands such as North Face, Patagonia, REI, Cavacure, 
+                        and Wise Owl who have a loyal customer base and a strong reputation for quality and sustainability.
+                        <br><br>
+                        While our competitors offer a range of products that cater to outdoor enthusiasts, our backpack is designed 
+                        to meet the specific needs of our target market. We understand that our customers are looking for products that are multifunctional 
+                        and can adapt to their changing needs. Our backpack does just that, making it an essential tool for anyone who loves spending time in the 
+                        great outdoors.
+                    </div>
+                    <div class="infoImage1">
+                        <img src="media/blammock competitors.png">
+                    </div>
+                
+                </div>
+            </div>
+            <br><br>
+            <div id=problemSolution>
+                <div class="categoryTitles">
+                    FUNDING REQUEST
+                </div>
+                <div class="categoryInfo">
+                    <div class="infoImage" id="balanceSheet">
+                        <img src="media/blammock balance sheet.png">
+                    </div>
+                    <div class="infoText">
+                        <strong> 5 YEAR FUNDING REQUIREMENT </strong>
+                        <br>
+                        $200 a week for materials (10 units a week)
+                        <br><br>
+                        Manufacturing plan is still TBD (in-house vs external manufacturer)
+                        The in-house manufacturing plan would likely have a lower cost than an external
+                         manufacturer at the cost of fewer units produced. The external manufacturing plan 
+                         would require extensive time and effort to research, and would cost more to set up. 
+                         This would be offset by the increased capacity to create units, and is something that 
+                         the team will need to strongly consider going forward.
 
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id=problemSolution>
+                <div class="categoryTitles">
+                        BUSINESS PILOT
+                </div>
+                <div class="categoryInfo" id="businessPilot">
+                    <div class="infoText">
+                        Blammock is committed to bringing our innovative product to market in a timely and
+                         efficient manner. Our goal is to begin delivering our product in the Fall of 2023, 
+                         which will coincide with the start of the new school year at USC. This will allow us 
+                         to tap into the large and active community of outdoor enthusiasts on campus and establish a
+                          strong presence in the market as students move onto campus.
+                        <br><br>
+                        To ensure the success of our product launch, we are working tirelessly to build brand 
+                        awareness and generate interest among our target audience. We plan to leverage a range of
+                        marketing channels, including social media, influencer partnerships, and on-campus events, 
+                        to reach as many potential customers as possible.
+                    </div>
+                    <div class="infoImage1" id="businessImage">
+                        <img src="media/blammock current balance sheet.png">
+                        <br><br>
+                        We are also focused on achieving a positive cash flow within the first year of operations.
+                        We believe that by carefully managing our costs, investing in smart marketing initiatives, 
+                        and delivering a high-quality product that meets the needs of our target customers, we can 
+                        achieve this goal and set ourselves up for long-term success.
+                    </div>
+                
+                </div>
+            </div>
+            <br><br>
+            <div id=problemSolution>
+                <div class="categoryTitles">
+                    NOW... AND BEYOND
+                </div>
+                <div class="categoryInfo" id="nowBeyond">
+                    <div class="infoImage" id="blammockNoun">
+                        <img src="media/blammock noun.png">
+                        <br><br>
+                        <div id="blammockNounText">
+                            We are also exploring opening an in-house manufacturing hub right here at USC. With this 
+                            route, Blammock would hire USC tailors and seamstresses on our campus and train them to create
+                            the Blammock from start to finish. Not only would this allow us to completely cut down on
+                            shipping costs for USC students, but it would give us complete control over the assembly 
+                            process. Any potential production issues could be more easily resolved by the team. 
+                            It would also provide job opportunities for USC students and benefit the community at our
+                            university.
+                        </div>
+                    </div>
+                    <div class="infoText">
+                        Blammock is constantly evaluating our financial situation and making strategic plans 
+                        to ensure our long-term success. Currently, we are in a strong financial position, with
+                         no debt and no plans to sell the company.
+                        <br><br>
+                        However, as we continue to grow and expand our product line, we recognize the need 
+                        to invest in new technologies, materials, and manufacturing processes. To that end, 
+                        we plan on exploring potential deals with manufacturers that can help us increase our 
+                        production capacity and improve the quality of our products.
+                        <br><br>
+                        While we recognize that such deals may require a significant investment of up to thousands 
+                        of dollars on our part, we are confident that the long-term benefits will outweigh the 
+                        short-term costs. By partnering with a manufacturer, we can reduce our production costs, 
+                        increase our efficiency, and ultimately provide better value to our customers.
+                        
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
         <div class="menu" id="footer">
             <a id="top">TOP</a>
             <ul class="nav">

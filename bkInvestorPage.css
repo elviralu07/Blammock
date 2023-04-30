@@ -1,23 +1,40 @@
-/* #problemSolution img{
-    object-fit:cover;
-    width:100%;
-    margin: 5px;
-    height: auto;
-    text-align: center
-} */
+#preloaderDiv {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    /* border: solid red 1px; */
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    
+}
+
+#preloaderGif
+
+
+#preloader {
+    width: 90%;
+    margin: auto;
+    /* border: solid red 1px; */
+    text-align: center;
+
+}
+
+/* Everything above is for the animation!  */
 
 #investorInfo{
     padding-left: 15%;
     padding-right: 15%;`
     /* height: 5000px; */
     /* border: solid red 1px; */
+    margin: auto;
 
 }
 
 #problemSolution{ 
     margin-top:10px;
     margin-bottom:10px;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -32,7 +49,7 @@
     /* flex-direction: row; */
     /* justify-content:center ; */
     /* column-gap: 30px; */
-    border: solid red 1px;
+    /* border: solid red 1px; */
     padding: 10px;
     width: 100%;
     margin: auto;
@@ -41,7 +58,7 @@
 
 .memberDesc {
     text-align: center;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     /* display: flex; */
 
 }
@@ -50,21 +67,46 @@
     margin: auto;
     /* text-align: center; */
     width: 75%;
+    text-align: center;
     /* border: solid red 1px; */
 
+}
+
+.infoText {
+    float: right;
+    width: 60%;
+    text-align: left;
 }
 
 .categoryTitles {
     font-size: 4vw;
     /* border: solid red 1px; */
-    width: 50%;
     margin: auto;
+    margin-bottom: 20px;
 
+}
+
+.infoImage1 {
+    float: left;
+    width: 80%;
+    text-align: left;
+    /* border: solid red 1px; */
+    margin-left: 5%;
+}
+
+.infoImage {
+    float: left;
+    width: 120%;
+}
+
+#businessImage img {
+    width: 100%;
+    /* border: solid red 1px; */
 }
 
 .categoryInfo img {
     object-fit:cover;
-    width: 30%;
+    width: 80%;
     margin: auto;
     height: auto;
     text-align: center
@@ -75,7 +117,44 @@
     width: 80%;
     margin: auto;
     text-align: center;
-    border: solid red 1px;
+    /* border: solid red 1px; */
+    display: flex;
+    flex-direction: row;
+}
+
+#blammockNoun img {
+    object-fit:cover;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    text-align: ;
+    
+}
+
+#blammockNoun {
+    text-align: center;
+    /* border: solid red 1px; */
+    
+
+}
+
+#blammockNounText {
+    text-align: left;
+    /* border: solid red 1px; */
+    margin: auto;
+    width: 80%;
+
+}
+
+#businessPilot {
+    display: flex;
+    flex-direction: row;
+    row-gap: 500px;
+    width: 80%;
+}
+
+#nowBeyond {
+    width: 90%;
 }
 
 .title{
