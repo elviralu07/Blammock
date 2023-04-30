@@ -201,21 +201,16 @@ $(document).ready(function() {
         let allFilled = true;
         const userInfo = document.querySelectorAll("[required]");
 
-        if(!shipping) {
-            userInfo.forEach((i) => {
-                if (i.parentNode.parentNode.id == "shipping" || i.parentNode.parentNode.parentNode.id == "shipping") {
-                    i.parentNode.removeChild(i);
-                }
-            })
-        }
-
-        console.log(userInfo)
-
         userInfo.forEach((i) => {
             if(i.value == "") {
-                allFilled = false;
+                if(shipping) {
+                    allFilled = false;
+                } else if(i.parentNode.parentNode.id != "shipping" && i.parentNode.parentNode.parentNode.id != "shipping") {
+                        allFilled = false;
+                    }
+                }
             }
-        })
+        )
 
         if(allFilled && checkEmail() && checkPhone() && checkCard()) {
             console.log("yay")
