@@ -21,6 +21,11 @@ li {
     justify-content: space-between;
 }
 
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;

@@ -46,7 +46,7 @@
                                     <label>City<br /><input type="text" required/></label><br />
                                     <label>State<br /><input type="text" required/></label><br />
                                 </div>
-                                <label>Zip Code<br /><input type="text" required/></label><br />
+                                <label>Zip Code<br /><input id="zip" type="text" required/></label><br />
                                 <label>Mobile Number<br /><input id="phone" type="text" placeholder="(XXX) XXX-XXXX" required/></label><br />
                             </div>
                             <div id="pickup">
@@ -74,8 +74,9 @@
     
             <div id="order-confirmation">
                 <p id="title">Order Confirmed</p>
-                <hr>
-                <div id="receipt"></div>
+                <div class="flex-around">
+                    <div id="receipt"></div>
+                </div>
             </div>
         </div>
 

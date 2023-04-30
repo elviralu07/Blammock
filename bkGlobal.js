@@ -167,6 +167,17 @@ const checkCard = function() {
     return false;
 }
 
+const checkZip = function() {
+    const zipRegex = /^\d{5}(?:[-\s]\d{4})?$/;
+    const zip = $("#zip").val();
+
+    if (zipRegex.test(zip)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 const updateReceipt = function() {
     let receiptCode = "<h2 class='text-center'>BLAMMOCK</h2>";
 
@@ -329,6 +340,10 @@ $(document).ready(function() {
             }
         )
 
+        if(shipping && !checkZip()) {
+            allFilled = false;            
+        }
+
         if(allFilled && checkEmail() && checkPhone() && checkCard()) {
             updateReceipt();
             $("#checkout-container").fadeOut();
@@ -336,6 +351,20 @@ $(document).ready(function() {
             $("#loading").fadeIn();
             $("#loading").delay(5000).fadeOut();
             $("#order-confirmation").delay(5000).fadeIn();
+            $("#checkout-container").hide();
+            $("#receipt").delay(5000).animate({
+                top: "+=25px"
+            }, 800).delay(100).animate({
+                top: "+=10px"
+            }, 500).animate({
+                top: "+=25px"
+            }, 500).animate({
+                top: "+=10px"
+            }, 500).delay(100).animate({
+                top: "+=10px"
+            }, 500).animate({
+                top: "+=100px"
+            }, 500);
         } else {
             alert("Please ensure you filled out all boxes correctly.");
         }
