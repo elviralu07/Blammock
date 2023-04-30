@@ -119,6 +119,34 @@
 }
 
 
+#reviews{
+    width:60%;
+    margin:auto;
+}
+#reviews .title{
+    line-height: 15vw;
+    padding-top: 10vw;
+
+}
+
+#reviews .text{
+    text-align: center;
+}
+.btn {
+    font-size: 1vw;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border: solid 1px black;
+      margin-bottom: 10px;
+  
+    }
+  
+.btn:hover {
+      background-color: white;
+      color: black;
+    }
+
 @media screen and (max-width: 800px) {
     .heading {
         padding-top: 50px;
