@@ -61,39 +61,60 @@ reviews.push(
 	);	
 
 
-listAllReviews();
+	listAllReviews();
 
-function listAllReviews(){
-	reset();
-    let output = document.querySelector("#results").innerHTML + "<br>";
-    for(let i=0; i<reviews.length; i++){
+	if(localStorage.getItem("newReviews")) {
+		getLocalRev();
+	}
+	console.log(localStorage.getItem("newReviews"));
+	
 
-        output += "<strong>" + reviews[i].name + " </strong><br>";
+	function listAllReviews() {
+		reset();
+		if(localStorage.getItem("newReviews")) {
+			console.log("yes");
+			getLocalRev();
+		}
+		let output = document.querySelector("#results").innerHTML + "<br>";
+		for(let i = 0; i < reviews.length; i++) {
+			output += "<strong>" + reviews[i].name + " </strong><br>";
+	
+			for(let j = 0; j < parseInt(reviews[i].rating); j++) {
+				output += "<img src = media/StarFilled.png>";
+			}
+	
+			for(let j = parseInt(reviews[i].rating); j < 5; j++) {
+				output += "<img src = media/StarClear.png>";
+			}
+	
+			output += "<br>" + reviews[i].text + " <br><br>";
+		}
+		document.querySelector("#results").innerHTML = output + "<br>";
+	}
 
-		for(let j=0; j < parseInt(reviews[i].rating); j++)
-			{output += "<img src = media/StarFilled.png>"}
 
-		for(let j = parseInt(reviews[i].rating); j< 5; j++)
-			{output += "<img src = media/StarClear.png>"}
-
-		output += "<br>" + reviews[i].text + " <br><br>";
-    }
-    document.querySelector("#results").innerHTML = output + "<br>";
-
-}
-
+	function getLocalRev() {
+		const reviewString = localStorage.getItem('newReviews');
+		const newReviews = JSON.parse(reviewString);
+		for (let i = 0; i < newReviews.length; i++) {
+		  reviews.push({
+			"name": newReviews[i].name,
+			"rating": newReviews[i].rating,
+			"text": newReviews[i].text
+		  });
+		}
+	  }
 
 document.querySelector("#search").addEventListener("click", function(){
     showResults();
-})
+});
 
-function showResults(){
+function showResults() {
     reset();
     let search = document.querySelector("#keyword").value;
-    //alert(search);
     let found = document.querySelector("#results").innerHTML + "<br>";
-    for(let i=0; i<reviews.length; i++){
-        if(reviews[i].text.indexOf(search) != -1){
+    for(let i = 0; i < reviews.length; i++) {
+        if(reviews[i].text.indexOf(search) != -1) {
             found += "<strong>" + reviews[i].name + " </strong><br>";
 
 			for(let j=0; j < parseInt(reviews[i].rating); j++)
@@ -110,6 +131,60 @@ function showResults(){
 
 }
 
-function reset(){
-    document.querySelector("#results").innerHTML = "<hr>";
+function filterRating(num){
+    reset();
+    let filter =num;
+    let found = document.querySelector("#results").innerHTML + "<br>";
+    for(let i=0; i<reviews.length; i++){
+        if(reviews[i].rating.indexOf(filter) != -1){
+            found += "<strong>" + reviews[i].name + " </strong><br>";
+
+			for(let j=0; j < parseInt(reviews[i].rating); j++)
+				{found += "<img src = media/StarFilled.png>"}
+
+			for(let j = parseInt(reviews[i].rating); j< 5; j++)
+				{found += "<img src = media/StarClear.png>"}
+
+				found += "<br>" + reviews[i].text + " <br><br>";
+			}
+    }
+    document.querySelector("#results").innerHTML = found + "<br>";
+
 }
+
+document.querySelector("#filter1").addEventListener("click", function(){
+	filterRating(1)
+});
+document.querySelector("#filter2").addEventListener("click", function(){
+	filterRating(2)
+});
+document.querySelector("#filter3").addEventListener("click", function(){
+	filterRating(3)
+});
+document.querySelector("#filter4").addEventListener("click", function(){
+	filterRating(4)
+});
+document.querySelector("#filter5").addEventListener("click", function(){
+	filterRating(5)
+});
+
+
+
+
+function reset() {
+    document.querySelector("#results").innerHTML = "";
+}
+
+document.querySelector("#submit").addEventListener("click", function() {
+    const name = document.querySelector("#name").value;
+    const rating = document.querySelector("#rating").value;
+    const text = document.querySelector("#text").value;
+    const newReview = {
+        "name": name,
+        "rating": rating,
+        "text": text
+    };
+    reviews.push(newReview);
+    localStorage.setItem("newReview", JSON.stringify(newReview));
+    listAllReviews();
+});
