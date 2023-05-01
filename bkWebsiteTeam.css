@@ -1,8 +1,16 @@
-#TeamPics img{
+#containsMem{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom:10vh;
+}
+.member img{
     object-fit:cover;
     width:100%;
     margin: 5px;
-    height: auto;
+    width: 20vh;
+    height: 20vh;
+
     text-align: center
 }
 #TeamPics{ 
@@ -33,32 +41,11 @@
 
 }
 
-.memberDesc {
+.member {
     text-align: center;
     /* border: solid red 1px; */
     /* display: flex; */
 
-}
-
-#descRor {
-    /* padding-right: 20px; */
-    margin-right: 40px;
-    margin-left: 30px;
-    /* margin-left: -20px; */
-}
-
-#descKM {
-    margin-left: 90px;
-    margin-right: 40px;
-}
-
-#descDM {
-    margin-left: 40px;
-}
-
-#descEl {
-    margin-left: 50px;
-    margin-right: -20px;
 }
 
 .title{
@@ -68,20 +55,31 @@
     padding-bottom:50px;
 
 }
+
+.text{
+    text-align: center;
+    padding-bottom: 10vh;
+}
 .heading{
     font-size:8vw;
     line-height: 90%;
     margin-bottom: 10px;
 }
 
-.section{
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
-}
-#fabricstorepic{
-    width:35%;
-    margin-right: 20px;
+
+
+@media screen and (max-width: 1023px) {
+    #containsMem{
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .member img{
+        
+        min-width: 20vh;
+        min-height: 20vh;
+        text-align: center
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -94,9 +92,11 @@
     }
     #TeamDescriptions {
         flex-direction:column;
-        max-width: 800px;
+        max-width: 300px;
         align-items: left;
-        font-size: 3vw;
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
   
     }
     #TeamPics{
@@ -104,11 +104,12 @@
       
     }
     .memberDesc{
-      font-size: 3vw;
       flex-direction:column;
         max-width: 200px;
         align-items: left;
-        font-size: 3vw;
-        
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        column-gap: 0px;
       }
   }

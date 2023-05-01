@@ -35,20 +35,26 @@
     padding:5%;
 }
 
-@media screen and (max-width: 800px) {
-    #TeamDescriptions {
-        flex-direction:column;
-        max-width: 800px;
-        align-items: center;
-        font-size: 3vw;
-  
-    }
-    #TeamPics{
-      width: 100%;
+#comment{
+    width: 90%;
+    height: 20vh;
+}
+
+ /* for tablets */
+ @media screen and (max-width: 1023px) {
+    .btn {
+        font-size: 2vw;
+          padding: 4px 7px;
+          margin-bottom: 15px;
       
+        }
+  }
+
+
+  /* for phones*/
+  @media screen and (max-width: 768px) {
+    #reviews{
+        width:80%;
     }
-    .memberDesc{
-      font-size: 3vw;
-        
-      }
+
   }

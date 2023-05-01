@@ -217,7 +217,7 @@
     cursor: pointer;
   }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 1024) {
     #container {
         flex-direction:column;
         max-width: 800px;
@@ -225,9 +225,66 @@
         font-size: 3vw;
   
     }
-    #TeamDescriptions {
+    #investorInfo {
         flex-direction:column;
         max-width: 800px;
+        align-items: left;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 3vw;
+        
+      }
+  }
+
+  @media screen and (max-width: 800px) {
+    #container {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #investorInfo {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: left;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 3vw;
+        
+      }
+  }
+  @media screen and (min-width: 800px) {
+    #container {
+        flex-direction:column;
+        /* max-width: 1023px; */
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #investorInfo {
+        flex-direction:column;
+        /* max-width: 1023px; */
         align-items: left;
         font-size: 3vw;
   
