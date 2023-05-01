@@ -217,31 +217,16 @@
     cursor: pointer;
   }
 
-@media screen and (max-width: 800px) {
-    #container {
-        flex-direction:column;
-        max-width: 800px;
-        align-items: center;
-        font-size: 3vw;
-  
+/* for tablets */
+@media screen and (max-width: 1023px) {
+    
+  }
+
+
+  /* for phones*/
+  @media screen and (max-width: 768px) {
+    #reviews{
+        width:80%;
     }
-    #TeamDescriptions {
-        flex-direction:column;
-        max-width: 800px;
-        align-items: left;
-        font-size: 3vw;
-  
-    }
-    #TeamPics{
-      width: 100%;
-      
-    }
-    .memberDesc{
-      font-size: 3vw;
-      flex-direction:column;
-        max-width: 200px;
-        align-items: left;
-        font-size: 3vw;
-        
-      }
+
   }
