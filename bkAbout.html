@@ -1,148 +1,693 @@
 <html>
-    <head><title>Blammock About Us</title>
+
+    <head>
+        <title>Blammock About Us</title>
         <link rel="stylesheet" href="https://use.typekit.net/gcg1tpt.css">
-    <link rel="stylesheet" href="bkGlobal.css"></head>
+        <link rel="stylesheet" href="bkGlobal.css">
+    </head>
 
-<style>
-    #textbox {
-       width : 50%;
-       float: right;
-       text-align: center;
-    }
-    .title {
-    text-align: center;
-    font-size: 130pt;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 5%;
-    line-height: 200px;
-    display: flex;
-}
-.p {
-    font-size: 30px;
-}
-    h1
-    { margin-top: 100px;
-        text-align: center;
-    }
-    #teampic {
-        width: 50%;
-        margin-top: 70px;
-        float: left;
-    }
-    .teampicc {
-        width: 700px;
-        margin-right: 500px;
-    }
-    .team {
-        width: 200px;
-        margin-top: 100px;
-        border: 1px solid black;
-    }
-    #flexdirection {
-        flex-wrap: wrap;
-        flex-direction: row;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
-<body>
-    <div class="bkHeader">
-        <div class="bkHeaderLeft">
-            <a href="BlammockHome.html">
-                <img src="bkLogo.png" alt="Blammock Logo" class="bkLogo">
-            </a>
-        </div>
-        <div id="container">
-            <div id="header" class="menu">
-                <a href="bkHome.html">BLAMMOCK</a>
-                <ul class="nav">
-                    <li><a href="bkShop.html">SHOP</a></li>
-                    <li><a href="bkAbout.html">ABOUT</a></li>
-                    <li><a href="bkWebTeam.html">WEBSITE TEAM</a></li>
-                    <li><a href="bkProduction.html">PRODUCTION</a></li>
-                    <li><a href="bkReviews.html">REVIEWS</a></li>
-                    <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
-                    <li><a id="cart-toggle">CART</a></li>
-                </ul>
-                <div id="toggle-btn">
-                    <input type="radio" name="colors" value="white" id="toggle1"> WHITE
-                      <input type="radio" name="colors" value="black" id="toggle2"> BLACK
-                  </div>
+    <style>
+        #textbox {
+            width: 50%;
+            float: right;
+            text-align: center;
+        }
+
+        .bkltitle {
+            text-align: center;
+            font-size: 130pt;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 5%;
+            line-height: 200px;
+            display: flex;
+        }
+
+        p {
+            font-size: 12pt;
+            padding: 10px;
+        }
+
+        h1 {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 18pt;
+            padding: 10px;
+            line-height: 10px;
+        }
+
+        h4 {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 15pt;
+            padding: 10px;
+        }
+
+        #teampic {
+            width: 50%;
+            margin-top: 70px;
+            float: left;
+        }
+
+        .teampicc {
+            width: 700px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .teamlala {
+            width: 200px;
+            margin-top: 100px;
+            border: 1px solid black;
+        }
+
+        #flexdirection {
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            font-size: 30pt;
+        }
+
+        #clip {
+            display: none;
+        }
+
+        img {
+            width: 200px;
+            margin: 20px;
+            position: relative;
+            left: 0;
+            top: 10;
+        }
+
+        .title {
+            font-size: 30pt;
+            opacity: 0%;
+            position: absolute;
+            top: 30px;
+            float: right;
+            left: 200px;
+        }
+
+        .title img {
+            top: 30px;
+            left: 500px;
+            text-align: center;
+            width: 300px;
+            padding-bottom: 50px;
+        }
+
+        .img {
+            opacity: 0%;
+            display: flex;
+            align-items: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 200px;
+            top: 80px;
+        }
+
+        .desc {
+            opacity: 0%;
+            font-size: 30pt;
+            position: absolute;
+            left: 200px;
+            top: 150px;
+            display: block;
+        }
+
+        #team1 {
+            opacity: 0%;
+            top: 300px;
+            left: 450px;
+            width: 600px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team2 {
+            opacity: 0%;
+            top: 150px;
+            left: 800px;
+            width: 400px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team3 {
+            opacity: 0%;
+            top: 100px;
+            left: 200px;
+            width: 400px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team4 {
+            opacity: 0%;
+            top: 100px;
+            left: 600px;
+            width: 400px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team5 {
+            opacity: 0%;
+            top: 100px;
+            left: 200px;
+            width: 500px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team6 {
+            opacity: 0%;
+            top: 200px;
+            left: 700px;
+            width: 600px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team7 {
+            opacity: 0%;
+            top: 250px;
+            left: 450px;
+            width: 500px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team8 {
+            opacity: 0%;
+            top: 100px;
+            left: 500px;
+            width: 500px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #team9 {
+            opacity: 0%;
+            top: 50px;
+            left: 500px;
+            width: 400px;
+            padding-bottom: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        .img2 {
+            opacity: 0%;
+            position: absolute;
+            left: 250px;
+            top: 650px
+        }
+
+        .desc2 {
+            opacity: 0%;
+            position: absolute;
+            left: 800;
+            top: 400px;
+        }
+
+        .drive {
+            opacity: 0%;
+            position: absolute;
+            left: 200;
+            top: 400px;
+        }
+
+        .img3 {
+            opacity: 0%;
+            position: absolute;
+            left: 30px;
+            top: 100px;
+        }
+
+        #img3 {
+            width: 700px;
+        }
+
+        .desc3 {
+            opacity: 0%;
+            font-size: 30pt;
+            position: absolute;
+            left: 90;
+            top: 700px;
+        }
+
+        .desc4 {
+            opacity: 0%;
+            position: absolute;
+            left: 300px;
+            top: 400px;
+        }
+
+        .desc5 {
+            opacity: 0%;
+            color: red;
+            font-size: 30pt;
+            position: absolute;
+            left: 300px;
+            top: 500px;
+        }
+
+        #title {
+            margin: auto;
+            text-align: center;
+            padding-top: 300px;
+            font-size: 50px;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-bottom: auto;
+            font-weight: bolder;
+            padding-bottom: 30px;
+
+            text-shadow:
+                -1px 1px 2px #ffffff,
+                1px 2px 6px #ffffff,
+                1px -1px 0 #ffffff,
+                -1px -1px 0 #ffffff;
+        }
+
+        #click {
+            font-size: 30px;
+            text-align: center;
+            font-size: 25px;
+            opacity: 0;
+            background-color: black;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #clickrep {
+            font-size: 30px;
+            text-align: center;
+            font-size: 25px;
+            opacity: 0;
+            background-color: black;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        #animated {
+            position: relative;
+            height: 100%;
+        }
+    </style>
+
+    <body>
+        <div class="bkHeader">
+            <div id="container">
+                <div id="header" class="menu">
+                    <a href="bkHome.html">BLAMMOCK</a>
+                    <ul class="nav">
+                        <li><a href="bkShop.html">SHOP</a></li>
+                        <li><a href="bkAbout.html">ABOUT</a></li>
+                        <li><a href="bkWebTeam.html">WEBSITE TEAM</a></li>
+                        <li><a href="bkProduction.html">PRODUCTION</a></li>
+                        <li><a href="bkReviews.html">REVIEWS</a></li>
+                        <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
+                        <li><a id="cart-toggle">CART</a></li>
+                    </ul>
+                    <div id="toggle-btn">
+                        <input type="radio" name="colors" value="white" id="toggle1"> WHITE
+                        <input type="radio" name="colors" value="black" id="toggle2"> BLACK
+                    </div>
+                </div>
             </div>
-    </div>
-    <div class=title>MEET TEAM BLAMMOCK</div>
 
-    <p class="p">The Blammock team was a group of six dynamic individuals - <strong>Lindsey, Campbelle, Josh, Hamin, Tyler,</strong> and <strong>Victoria</strong>. They were all tasked with the challenge of coming up with a product for a lemonade stand project, and they were determined to create something unique and exciting that would catch the attention of students.
-<br>
-<br>
-        After a lot of brainstorming and bouncing ideas off of each other, Lindsey had an "Aha!" moment and suggested creating a multi-purpose <strong>hammock</strong> that could transform into a <strong>backpack</strong> and a <strong>blanket</strong> - and so the <strong>Blammock was born! </strong>The team was thrilled with the idea, and they quickly got to work, with Campbelle and Lindsey leading the way in figuring out the pattern and sewing the first prototype.
+            <div id="animated">
+                <audio id="clip" controls>
+                    <source src="BLAMMOCK.m4a">
+                  Your browser does not support the audio element.
+                </audio>
+        
+                <div id="title">
+                    GET TO KNOW BLAMMOCK!
+                </div>
+        
+                <div id="click">
+                    <em>(click me to continue)</em>
+                </div>
+                
+                <div class="title">
+                    <img src="presentation/1.jpeg" alt="Blammock Product Image"> <br>      
+                    Blammock is a four in one solution that combines <br> backpacks, hammocks, tote and a blanket <br> into one unique product.
+                </div>
+        
+                <div class="img">
+                    Meet the innovative masterminds behind this solution.
+                </div>
+        
+                <div class="desc">
+                    Josh, <br>
+                    Lindsey, <br>
+                    Campbelle, <br>
+                    Hamin, <br>
+                    Victoria, <br>
+                    Tyler. <br>
+                </div>
+        
+                <img src="presentation/19.jpeg" alt="Blammock Team Members" id="team1"> <br>      
+        
+                <img src="presentation/2.jpeg" alt="Blammock Team Members" id="team2"> <br>  
+        
+                <div class="img2">
+                    First, they got to designing what the product <br>
+                    would look like and how it would function. <br>
+                </div>
+        
+                <img src="presentation/17.jpeg" alt="Blammock Product Blueprint (initial designs)" id="team3">
+        
+                <img src="presentation/16.jpeg" alt="Blammock Product Blueprint (initial designs)" id="team4">
+        
+                <div class="desc2">
+                    Then they had to source <br>
+                    the materials they would <br>
+                    need to bring this to life. <br>
+                </div>
+        
+                <img src="presentation/18.jpeg" alt="Fabric used for Blammock" id="team5">
+        
+                <div class="drive">
+                    As a team, they worked <br>
+                    long and hard to make <br>
+                    the prototypes by hand. <br>
+                </div>
+        
+                <img src="presentation/10.jpeg" alt="Blammock Team working together" id="team6">
+        
+                <div class="img3">
+                    Once they were ready, <br>
+                    they decided to go to market. <br>
+                    More specifically, the Trojan market <br>
+                </div>
+        
+                <img src="presentation/14.jpeg" alt="Trojan Market Place Poster" id="team7">
+        
+                <div class="desc3">
+                    even going as far as building a ten foot sign to attract potential customers.
+                </div>
+        
+                <img src="presentation/12.jpeg" alt="Blammock Sign" id="team8">
+        
+                <img src="presentation/11.jpeg" alt="Blammock Sign" id="team9">
+        
+                <div class="desc4">
+                    So what are you waiting for? Blammock is the future.
+                </div>
+        
+                <div class="desc5">
+                    And they can't wait to see you in your <strong>BLAMMOCK</strong>
+                </div>
+        
+                <div id="clickrep">
+                    refresh page to replay
+                </div>
+            </div>
+
+            <div class=bkltitle>MEET TEAM BLAMMOCK</div>
+
+            <p class="p">The Blammock team was a group of six dynamic individuals - <strong>Lindsey, Campbelle, Josh, Hamin,
+                    Tyler,</strong> and <strong>Victoria</strong>. They were all tasked with the challenge of coming up with
+                a product for a lemonade stand project, and they were determined to create something unique and exciting
+                that would catch the attention of students.
+                <br>
+                <br>
+                After a lot of brainstorming and bouncing ideas off of each other, Lindsey had an "Aha!" moment and
+                suggested creating a multi-purpose <strong>hammock</strong> that could transform into a
+                <strong>backpack</strong> and a <strong>blanket</strong> - and so the <strong>Blammock was born!
+                </strong>The team was thrilled with the idea, and they quickly got to work, with Campbelle and Lindsey
+                leading the way in figuring out the pattern and sewing the first prototype.
+                <br>
+                <br>
+                As they continued to develop the Blammock, each member of the team brought their own unique skills and
+                strengths to the table. Josh came up with the perfect branding and logo design, while Hamin, Tyler, and
+                Victoria ideated additional features that would make the Blammock even more versatile and appealing.
+                <br>
+                <br>
+                Despite some setbacks and challenges along the way, the team never lost sight of their goal - to
+                <strong>create a product that students would love and use every day. </strong>They poured their hearts and
+                souls into the project, working late into the night and putting in countless hours of hard work and
+                dedication.
+                <br>
+                <br>
+                So next time you're lounging in a Blammock, remember that <strong>it was created with love, passion, and the
+                    tireless efforts</strong> of the amazing team behind it.
+            </p>
+
+            <img src="media/IMG_2881.jpeg" alt="Blammock Team" class="teampicc">
+
+            <div id="flexdirection">
+                <div class="teamlala">
+                    <img src="media/IMG_2887.jpeg" alt="Lindsey" class="teamlala">
+                    <h2>Lindsey</h2>
+                    <h4>Product Creator</h4>
+                    <p>Hi! I'm Lindsey, and I'm a sophomore at the University of Southern California, I'm majoring in Arts,
+                        Technology and the Business of Innovation, and I'm also a member of the USC Helenes. I had so much
+                        fun creating the blammock and can't wait see you guys in your blammock!</p>
+                </div>
+                <div class="teamlala">
+                    <img src="media/campbelle blammock.JPG" alt="Campbelle" class="teamlala">
+                    <h2>Campbelle</h2>
+                    <h4>Product Designer</h4>
+                    <p>Hi! I'm Campbelle, and I'm a freshman at the University of Southern California. I'm majoring Arts,
+                        Technology and the Business of Innovation, and I'm also a member of USC BT HipHop. I love fashion
+                        design and designing the Blammock was such a cool experience!</p>
+                </div>
+                <div class="teamlala">
+                    <img src="media/IMG_2883.jpeg" alt="Josh" class="teamlala">
+                    <h2>Josh</h2>
+                    <h4>Product Creator</h4>
+                    <p>Hi! I'm Josh, and I'm a freshman at the University of Southern California. I'm majoring in Arts,
+                        Technology and the Business of Innovation in the Iovine and Young Academy. Woodworking is my passion
+                        and my family and friend can always catch me holding a piece of wood. Let's get Blamming!</p>
+                </div>
+                <div class="teamlala">
+                    <img src="media/IMG_2884.jpeg" alt="Hamin" class="teamlala">
+                    <h2>Hamin</h2>
+                    <h4>Sales and Marketing</h4>
+                    <p>Hi! I'm Hamin, and I'm a freshman at the University of Southern California. I'm majoring in Arts,
+                        Technology and the Business of Innovation in the Iovine and Young Academy. I love to play intermural
+                        sports like soccer and basketball in my free time. I'm so excited to be a part of the Blammock team!
+                    </p>
+                </div>
+                <div class="teamlala">
+                    <img src="media/IMG_2893.jpeg" alt="Tyler" class="teamlala">
+                    <h2>Tyler</h2>
+                    <h4>Project Manager</h4>
+                    <p>Hi! I'm Tyler, and I'm a freshman at the University of Southern California. I'm majoring in Arts,
+                        Technology and the Business of Innovation in the Iovine and Young Academy. I enjoy working as a tour
+                        guide for USC in my free time. It's been amazing being apart of the Blammock team, and I can't wait
+                        to see what the future holds for us!</p>
+                </div>
+                <div class="teamlala">
+                    <img src="media/IMG_2881.jpeg" alt="Victoria" class="teamlala">
+                    <h2>Victoria</h2>
+                    <h4>Graphic Designer</h4>
+                    <p>Hi! I'm Victoria, and I'm a sophomore at the University of Southern California. I'm majoring in Arts,
+                        Technology and the Business of Innovation in the Iovine and Young Academy. I love making graphic
+                        designs in my free time. Go grab a Blammock!</p>
+                </div>
+            </div>
+        </div>
+
         <br>
-        <br>                
-        As they continued to develop the Blammock, each member of the team brought their own unique skills and strengths to the table. Josh came up with the perfect branding and logo design, while Hamin, Tyler, and Victoria ideated additional features that would make the Blammock even more versatile and appealing.
-<br>
-<br>
-        Despite some setbacks and challenges along the way, the team never lost sight of their goal - to <strong>create a product that students would love and use every day. </strong>They poured their hearts and souls into the project, working late into the night and putting in countless hours of hard work and dedication. 
-        <br>
-        <br>
-        So next time you're lounging in a Blammock, remember that <strong>it was created with love, passion, and the tireless efforts</strong> of the amazing team behind it.
-    </p>
-        <img src="media/IMG_2881.jpeg" alt="Blammock Team" class="teampicc">
- 
-        <div id="flexdirection">
-        <div class="team">
-            <img src="media/IMG_2881.jpeg" alt="Lindsey" class="team">
-            <h2>Lindsey</h2>
-            <h4>Product Creator</h4>
-            <p>Hi! I'm Lindsey, and I'm a sophomore at the University of Southern California, I'm majoring in Arts, Technology and the Business of Innovation, and I'm also a member of the USC Helenes. I had so much fun creating the blammock and can't wait see you guys in your blammock!</p>
-        </div>
-        <div class="team">
-            <img src="media/campbelle blammock.JPG" alt="Campbelle" class="team">
-            <h2>Campbelle</h2>
-            <h4>Product Designer</h4>
-            <p>Hi! I'm Campbelle, and I'm a freshman at the University of Southern California. I'm majoring Arts, Technology and the Business of Innovation, and I'm also a member of USC BT HipHop. I love fashion design and designing the Blammock was such a cool experience!</p>
-        </div>
-        <div class="team">
-            <img src="media/IMG_2883.jpeg" alt="Josh" class="team">
-            <h2>Josh</h2>
-            <h4>Product Creator</h4>
-            <p>Hi! I'm Josh, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. Woodworking is my passion and my family and friend can always catch me holding a piece of wood. Let's get Blamming!</p>
-        </div>
-        <div class="team">
-            <img src="media/IMG_2884.jpeg" alt="Hamin" class="team">
-            <h2>Hamin</h2>
-            <h4>Sales and Marketing</h4>
-            <p>Hi! I'm Hamin, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I love to play intermural sports like soccer and basketball in my free time. I'm so excited to be a part of the Blammock team!</p>
-        </div>
-        <div class="team">
-            <img src="media/IMG_2893.jpeg" alt="Tyler" class="team">
-            <h2>Tyler</h2>
-            <h4>Project Manager</h4>
-            <p>Hi! I'm Tyler, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I enjoy working as a tour guide for USC in my free time. It's been amazing being apart of the Blammock team, and I can't wait to see what the future holds for us!</p>
-        </div>
-        <div class="team">
-            <img src="media/IMG_2885.jpeg" alt="Victoria" class="team">
-            <h2>Victoria</h2>
-            <h4>Graphic Designer</h4>
-            <p>Hi! I'm Victoria, and I'm a sophomore at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I love making graphic designs in my free time. Go grab a Blammock!</p>
-        </div>
-    </div>
-</div>
-    <div class="menu" id="footer">  
-                 <h2>Get In Touch</h2>
-         <input type="form" name="name" placeholder="Name">
+        
+        <div class="menu" id="footer">
+            <h2>Get In Touch</h2>
+            <input type="form" name="name" placeholder="Name">
             <input type="form" name="email" placeholder="Email">
-            <input type="form" name="message" placeholder="Message"> 
-            <button type="submit">Submit</button>        
-                <ul class="nav"><a id="top">TOP</a>
-                    <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
-                    <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
-                </ul>
-            </div>
+            <input type="form" name="message" placeholder="Message">
+            <button type="submit">Submit</button>
+            <ul class="nav"><a id="top">TOP</a>
+                <li><a href="https://www.instagram.com/blammock_/"><img src="media/instagram.png"></a></li>
+                <li><a href="https://www.tiktok.com/@blammock"><img src="media/tiktok.png"></a></li>
+            </ul>
+        </div>
 
+        <div id="sidebar">
+            <h1 id="cart-close">></h1>
+            <div id="cart">You have no items</div>
+        </div>
+
+    </body>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bkGlobal.js"></script>
-</body>
+
+    <script>
+        $(document).ready(function(){
+            $("#title").delay(900).animate({"opacity": "100%"},1000);
+            $("#click").delay(900).animate({"opacity": "100%"},1000);
+            $(document).on("click", function () {
+                $("audio").trigger("play");
+                $("#title").animate({"opacity": "0%"},500);
+                $("#click").animate({"opacity": "0%"},500);
+
+
+                $(".title").animate({ 
+                    "opacity": "100%",
+                    "font-size": "3rem"
+                }).delay(6000).animate({
+                    "opacity": "0%",
+                })
+                
+                $(".img").delay(6500).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $(".desc").delay(9500).animate({
+                    "opacity": "100%",
+                }).delay(4000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team1").delay(9900).animate({
+                    "opacity": "100%",
+                }).delay(3600).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team2").delay(11000).animate({
+                    "opacity": "100%",
+                }).delay(2500).animate({
+                    "opacity": "0%",
+                })
+
+                $(".img2").delay(14200).animate({
+                    "opacity": "100%",
+                }).delay(4000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team3").delay(14700).animate({
+                    "opacity": "100%",
+                }).delay(3500).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team4").delay(15000).animate({
+                    "opacity": "100%",
+                }).delay(3200).animate({
+                    "opacity": "0%",
+                })
+
+                $(".desc2").delay(19000).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team5").delay(19000).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $(".drive").delay(22500).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team6").delay(22500).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $(".img3").delay(26000).animate({
+                    "opacity": "100%",
+                    "left": "300px",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team7").delay(26000).animate({
+                    "opacity": "100%",
+                }).delay(3000).animate({
+                    "opacity": "0%",
+                })
+                
+                $(".desc3").delay(30000).animate({
+                    "opacity": "100%",
+                }).delay(4000).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team8").delay(30000).animate({
+                    "opacity": "100%",
+                }).delay(1500).animate({
+                    "opacity": "0%",
+                })
+
+                $("#team9").delay(32000).animate({
+                    "opacity": "100%",
+                }).delay(2000).animate({
+                    "opacity": "0%",
+                })
+
+                $(".desc4").delay(35000).animate({
+                    "opacity": "100%",
+                }).delay(7000).animate({
+                    "opacity": "0%",
+                })
+
+                $(".desc5").delay(37500).animate({
+                    "opacity": "100%",
+                }).delay(4500).animate({
+                    "opacity": "0%",
+                })
+
+                $("#clickrep").delay(42500).animate({
+                    "opacity": "100%",
+                })
+            })
+        })
+    </script>
+
 </html>
