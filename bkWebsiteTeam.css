@@ -94,9 +94,11 @@
     }
     #TeamDescriptions {
         flex-direction:column;
-        max-width: 800px;
+        max-width: 300px;
         align-items: left;
-        font-size: 3vw;
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
   
     }
     #TeamPics{
@@ -104,11 +106,12 @@
       
     }
     .memberDesc{
-      font-size: 3vw;
       flex-direction:column;
         max-width: 200px;
         align-items: left;
-        font-size: 3vw;
-        
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        column-gap: 0px;
       }
   }
