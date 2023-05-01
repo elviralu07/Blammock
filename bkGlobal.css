@@ -237,5 +237,19 @@ body {
     color: #000;
     cursor: pointer;
   }
-
+  .dark {
+    background-color: black;
+    color: white;
+  }
+  .dark a {
+    color: white;
+  }
+  
+  .white-link {
+    color: black;
+  }
+  
+  .black-link {
+    color: white;
+  }
  

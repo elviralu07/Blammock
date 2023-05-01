@@ -380,7 +380,6 @@ $(document).ready(function() {
         }
     })
 })
-
 function setPageColorPreference() {
     const toggle1 = document.getElementById("toggle1");
     const toggle2 = document.getElementById("toggle2");
@@ -399,15 +398,36 @@ function setPageColorPreference() {
       body.style.color = "black";
     }
   
+    // Set link styles based on page color preference
+    if (colorPreference === "white") {
+      document.querySelectorAll("a").forEach(function(link) {
+        link.classList.remove("black-link");
+        link.classList.add("white-link");
+      });
+    } else {
+      document.querySelectorAll("a").forEach(function(link) {
+        link.classList.remove("white-link");
+        link.classList.add("black-link");
+      });
+    }
+  
     // Listen for changes in the button selection
     document.getElementById("toggle-btn").addEventListener("change", function() {
       if (toggle1.checked) {
         body.style.backgroundColor = "white";
         body.style.color = "black";
+        document.querySelectorAll("a").forEach(function(link) {
+          link.classList.remove("black-link");
+          link.classList.add("white-link");
+        });
         localStorage.setItem("pageColorPreference", "white");
       } else {
         body.style.backgroundColor = "black";
         body.style.color = "white";
+        document.querySelectorAll("a").forEach(function(link) {
+          link.classList.remove("white-link");
+          link.classList.add("black-link");
+        });
         localStorage.setItem("pageColorPreference", "black");
       }
     });
@@ -415,3 +435,4 @@ function setPageColorPreference() {
   
   // Call the function on page load
   setPageColorPreference();
+  
