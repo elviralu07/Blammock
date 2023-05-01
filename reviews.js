@@ -182,7 +182,7 @@ const addReview = function() {
     allR.push({
         name: document.querySelector("#name").value,
         rating: document.querySelector("#rating").value,
-        text: document.querySelector("#text").value
+        text: document.querySelector("#comment").value
     });
 	localStorage.setItem("allReviews", JSON.stringify(allR));
     listAllReviews();
