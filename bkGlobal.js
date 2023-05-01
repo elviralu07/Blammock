@@ -380,3 +380,38 @@ $(document).ready(function() {
         }
     })
 })
+
+function setPageColorPreference() {
+    const toggle1 = document.getElementById("toggle1");
+    const toggle2 = document.getElementById("toggle2");
+    const body = document.body;
+  
+    // Check if there's a saved preference in local storage
+    const colorPreference = localStorage.getItem("pageColorPreference");
+  
+    if (colorPreference === "black") {
+      toggle2.checked = true;
+      body.style.backgroundColor = "black";
+      body.style.color = "white";
+    } else {
+      toggle1.checked = true;
+      body.style.backgroundColor = "white";
+      body.style.color = "black";
+    }
+  
+    // Listen for changes in the button selection
+    document.getElementById("toggle-btn").addEventListener("change", function() {
+      if (toggle1.checked) {
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+        localStorage.setItem("pageColorPreference", "white");
+      } else {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        localStorage.setItem("pageColorPreference", "black");
+      }
+    });
+  }
+  
+  // Call the function on page load
+  setPageColorPreference();
