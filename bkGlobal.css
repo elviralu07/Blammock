@@ -4,12 +4,39 @@ body {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 
 li {
     list-style: none;
     display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-btwn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .menu a:hover {
@@ -50,11 +77,165 @@ li {
 }
 
 #sidebar {
-    background-color: red;
-    width: 500px;
+    background-color: #FFFFFF;
+    border-left: solid 1px #000000;
+    width: 300px;
     height: 100%;
+    padding: 0px 20px 0 30px;
     z-index: 3;
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -400px;
+    font-size: 18px;
+    text-align: left;
+    overflow-y: scroll;
+    transition: 0.5s;
 }
+
+#sidebar hr {
+    border-color: #000000;
+}
+
+.in-cart-item {
+    border: solid 1px #000000;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.remove-item-bttn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body {
+    background-color: linear-gradient(15deg, #004f05, #ffffff, #ff439e, #ffcd4e #ffffff, #4ebeff);    
+}
+
+body {
+    font-family: "loos-normal", serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-btwn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    font-size: 14pt;
+    height: 50px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.nav li {
+    margin: 10px;
+}
+
+.nav img {
+    width: 25px;
+}
+
+#header {
+    padding-bottom: 5px;
+    border-bottom: solid 1px #000000;
+}
+
+#footer {
+    border-top: solid 1px #000000;
+    text-align: center;
+}
+
+#sidebar {
+    background-color: #FFFFFF;
+    border-left: solid 1px #000000;
+    width: 300px;
+    height: 100%;
+    padding: 0px 20px 0 30px;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    font-size: 18px;
+    text-align: left;
+    overflow-y: scroll;
+    transition: 0.5s;
+}
+
+#sidebar hr {
+    border-color: #000000;
+}
+
+.in-cart-item {
+    border: solid 1px #000000;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.remove-item-bttn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body {
+    background-color: white;
+    color:#000000;
+
+};
+
+  #toggle-btn {
+    float: left;   
+    padding: 5px;
+    color: #000;
+    cursor: pointer;
+  }
+
+ 

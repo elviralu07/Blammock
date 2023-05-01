@@ -9,6 +9,19 @@
        float: right;
        text-align: center;
     }
+    .title {
+    text-align: center;
+    font-size: 130pt;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 5%;
+    line-height: 200px;
+    display: flex;
+}
+.p {
+    font-size: 30px;
+}
     h1
     { margin-top: 100px;
         text-align: center;
@@ -20,21 +33,18 @@
     }
     .teampicc {
         width: 700px;
-        float: left;
-        border-radius: 20px;
-    }
-    #TTM {
-        width: 100%;
-        margin-top: 100px;
-        border: 1px solid black;
+        margin-right: 500px;
     }
     .team {
         width: 200px;
-        float: left;
         margin-top: 100px;
         border: 1px solid black;
+    }
+    #flexdirection {
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
     }
 </style>
 <body>
@@ -45,76 +55,77 @@
             </a>
         </div>
         <div id="container">
-            <div class="menu" id="header">
+            <div id="header" class="menu">
                 <a href="bkHome.html">BLAMMOCK</a>
                 <ul class="nav">
                     <li><a href="bkShop.html">SHOP</a></li>
                     <li><a href="bkAbout.html">ABOUT</a></li>
                     <li><a href="bkWebTeam.html">WEBSITE TEAM</a></li>
                     <li><a href="bkProduction.html">PRODUCTION</a></li>
-                    <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
-                    <li><a href="bkGuide.html">GUIDE</a></li>
-                    <li><a href="bkInvestorPage.html">Investor Page</a></li>
+                    <li><a href="bkReviews.html">REVIEWS</a></li>
+                    <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
+                    <li><a id="cart-toggle">CART</a></li>
                 </ul>
+                <div id="toggle-btn">
+                    <input type="radio" name="colors" value="white" id="toggle1"> WHITE
+                      <input type="radio" name="colors" value="black" id="toggle2"> BLACK
+                  </div>
             </div>
     </div>
-    <div id="MainContent">
-    <div id="teampic">
+    <div class=title>MEET TEAM BLAMMOCK</div>
+
+    <p class="p">The Blammock team was a group of six dynamic individuals - <strong>Lindsey, Campbelle, Josh, Hamin, Tyler,</strong> and <strong>Victoria</strong>. They were all tasked with the challenge of coming up with a product for a lemonade stand project, and they were determined to create something unique and exciting that would catch the attention of students.
+<br>
+<br>
+        After a lot of brainstorming and bouncing ideas off of each other, Lindsey had an "Aha!" moment and suggested creating a multi-purpose <strong>hammock</strong> that could transform into a <strong>backpack</strong> and a <strong>blanket</strong> - and so the <strong>Blammock was born! </strong>The team was thrilled with the idea, and they quickly got to work, with Campbelle and Lindsey leading the way in figuring out the pattern and sewing the first prototype.
+        <br>
+        <br>                
+        As they continued to develop the Blammock, each member of the team brought their own unique skills and strengths to the table. Josh came up with the perfect branding and logo design, while Hamin, Tyler, and Victoria ideated additional features that would make the Blammock even more versatile and appealing.
+<br>
+<br>
+        Despite some setbacks and challenges along the way, the team never lost sight of their goal - to <strong>create a product that students would love and use every day. </strong>They poured their hearts and souls into the project, working late into the night and putting in countless hours of hard work and dedication. 
+        <br>
+        <br>
+        So next time you're lounging in a Blammock, remember that <strong>it was created with love, passion, and the tireless efforts</strong> of the amazing team behind it.
+    </p>
         <img src="media/IMG_2881.jpeg" alt="Blammock Team" class="teampicc">
-    </div>
-    <div class="bkContent">
-        <div id="textbox">
-            <h1>About Us</h1>
-            <p>The Blammock team was a group of six dynamic individuals - Lindsey, Campbelle, Josh, Hamin, Tyler, and Victoria. They were all tasked with the challenge of coming up with a product for a lemonade stand project, and they were determined to create something unique and exciting that would catch the attention of students.
-<br>
-<br>
-                After a lot of brainstorming and bouncing ideas off of each other, Lindsey had an "Aha!" moment and suggested creating a multi-purpose hammock that could transform into a backpack and a blanket - and so the Blammock was born! The team was thrilled with the idea, and they quickly got to work, with Campbelle and Lindsey leading the way in figuring out the pattern and sewing the first prototype.
-                <br>
-                <br>                
-                As they continued to develop the Blammock, each member of the team brought their own unique skills and strengths to the table. Josh came up with the perfect branding and logo design, while Hamin, Tyler, and Victoria ideated additional features that would make the Blammock even more versatile and appealing.
-<br>
-<br>
-                Despite some setbacks and challenges along the way, the team never lost sight of their goal - to create a product that students would love and use every day. They poured their hearts and souls into the project, working late into the night and putting in countless hours of hard work and dedication. 
-                <br>
-                <br>
-                So next time you're lounging in a Blammock, remember that it was created with love, passion, and the tireless efforts of the amazing team behind it.
-            </p>
-        </div>
-    </div>
-    </div>
-</div>
-<div id="TTM">
-    <h1>Meet the Team</h1>
-    <div>
+ 
+        <div id="flexdirection">
         <div class="team">
             <img src="media/IMG_2881.jpeg" alt="Lindsey" class="team">
             <h2>Lindsey</h2>
-            <p>Hi! I'm Lindsey, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Product Creator</h4>
+            <p>Hi! I'm Lindsey, and I'm a sophomore at the University of Southern California, I'm majoring in Arts, Technology and the Business of Innovation, and I'm also a member of the USC Helenes. I had so much fun creating the blammock and can't wait see you guys in your blammock!</p>
         </div>
         <div class="team">
-            <img src="media/IMG_2882.jpeg" alt="Campbelle" class="team">
+            <img src="media/campbelle blammock.JPG" alt="Campbelle" class="team">
             <h2>Campbelle</h2>
-            <p>Hi! I'm Campbelle, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Product Designer</h4>
+            <p>Hi! I'm Campbelle, and I'm a freshman at the University of Southern California. I'm majoring Arts, Technology and the Business of Innovation, and I'm also a member of USC BT HipHop. I love fashion design and designing the Blammock was such a cool experience!</p>
         </div>
         <div class="team">
             <img src="media/IMG_2883.jpeg" alt="Josh" class="team">
             <h2>Josh</h2>
-            <p>Hi! I'm Josh, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Product Creator</h4>
+            <p>Hi! I'm Josh, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. Woodworking is my passion and my family and friend can always catch me holding a piece of wood. Let's get Blamming!</p>
         </div>
         <div class="team">
             <img src="media/IMG_2884.jpeg" alt="Hamin" class="team">
             <h2>Hamin</h2>
-            <p>Hi! I'm Hamin, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Sales and Marketing</h4>
+            <p>Hi! I'm Hamin, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I love to play intermural sports like soccer and basketball in my free time. I'm so excited to be a part of the Blammock team!</p>
         </div>
         <div class="team">
-            <img src="media/IMG_2885.jpeg" alt="Tyler" class="team">
+            <img src="media/IMG_2893.jpeg" alt="Tyler" class="team">
             <h2>Tyler</h2>
-            <p>Hi! I'm Tyler, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Project Manager</h4>
+            <p>Hi! I'm Tyler, and I'm a freshman at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I enjoy working as a tour guide for USC in my free time. It's been amazing being apart of the Blammock team, and I can't wait to see what the future holds for us!</p>
         </div>
         <div class="team">
-            <img src="media/IMG_2886.jpeg" alt="Victoria" class="team">
+            <img src="media/IMG_2885.jpeg" alt="Victoria" class="team">
             <h2>Victoria</h2>
-            <p>Hi! I'm Victoria, and I'm a senior at the University of Michigan. I'm majoring in Psychology and minoring in Business, and I'm also a member of the Michigan Marching Band. I'm so excited to be a part of the Blammock team, and I can't wait to see what the future holds for us!</p>
+            <h4>Graphic Designer</h4>
+            <p>Hi! I'm Victoria, and I'm a sophomore at the University of Southern California. I'm majoring in Arts, Technology and the Business of Innovation in the Iovine and Young Academy. I love making graphic designs in my free time. Go grab a Blammock!</p>
         </div>
     </div>
 </div>

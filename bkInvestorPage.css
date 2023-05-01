@@ -1,10 +1,26 @@
-/* #problemSolution img{
-    object-fit:cover;
-    width:100%;
-    margin: 5px;
-    height: auto;
-    text-align: center
-} */
+#preloaderDiv {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    /* border: solid red 1px; */
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    
+}
+
+#preloaderGif
+
+
+#preloader {
+    width: 90%;
+    margin: auto;
+    /* border: solid red 1px; */
+    text-align: center;
+
+}
+
+/* Everything above is for the animation!  */
 
 #investorInfo{
     padding-left: 15%;
@@ -65,7 +81,6 @@
 .categoryTitles {
     font-size: 4vw;
     /* border: solid red 1px; */
-    width: 50%;
     margin: auto;
     margin-bottom: 20px;
 
@@ -74,11 +89,24 @@
 .infoImage1 {
     float: left;
     width: 80%;
+    text-align: left;
+    /* border: solid red 1px; */
+    margin-left: 5%;
+}
+
+.infoImage {
+    float: left;
+    width: 120%;
+}
+
+#businessImage img {
+    width: 100%;
+    /* border: solid red 1px; */
 }
 
 .categoryInfo img {
     object-fit:cover;
-    width: 50%;
+    width: 80%;
     margin: auto;
     height: auto;
     text-align: center
@@ -92,6 +120,41 @@
     /* border: solid red 1px; */
     display: flex;
     flex-direction: row;
+}
+
+#blammockNoun img {
+    object-fit:cover;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    text-align: ;
+    
+}
+
+#blammockNoun {
+    text-align: center;
+    /* border: solid red 1px; */
+    
+
+}
+
+#blammockNounText {
+    text-align: left;
+    /* border: solid red 1px; */
+    margin: auto;
+    width: 80%;
+
+}
+
+#businessPilot {
+    display: flex;
+    flex-direction: row;
+    row-gap: 500px;
+    width: 80%;
+}
+
+#nowBeyond {
+    width: 90%;
 }
 
 .title{
@@ -117,7 +180,44 @@
     margin-right: 20px;
 }
 
-@media screen and (max-width: 800px) {
+
+#chart{
+    width:70%;
+    margin:auto;
+    text-align: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 25%%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: darkolivegreen;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: darkolivegreen;
+    cursor: pointer;
+  }
+
+@media screen and (min-width: 1024) {
     #container {
         flex-direction:column;
         max-width: 800px;
@@ -125,9 +225,66 @@
         font-size: 3vw;
   
     }
-    #TeamDescriptions {
+    #investorInfo {
         flex-direction:column;
         max-width: 800px;
+        align-items: left;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 3vw;
+        
+      }
+  }
+
+  @media screen and (max-width: 800px) {
+    #container {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #investorInfo {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: left;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 3vw;
+        
+      }
+  }
+  @media screen and (min-width: 800px) {
+    #container {
+        flex-direction:column;
+        /* max-width: 1023px; */
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #investorInfo {
+        flex-direction:column;
+        /* max-width: 1023px; */
         align-items: left;
         font-size: 3vw;
   
