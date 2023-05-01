@@ -223,25 +223,18 @@ li {
     top: 10px;
     right: 10px;
 }
- .white-mode {
 
-	background: linear-gradient(15deg,#fbff00, #4ebeff, #ffffff);
-        color: rgb(0, 0, 0);
-  }
-  
 body {
-    background-color: linear-gradient(15deg, #004f05, #ffffff, #ff439e, #ffcd4e #ffffff, #4ebeff);    
-}
+    background-color: white;
+    color:#000000;
+
+};
 
   #toggle-btn {
-    display: inline-block;
-    padding: 10px;
-    background-color: #ccc;
+    float: left;   
+    padding: 5px;
     color: #000;
     cursor: pointer;
   }
-  
-  #toggle-btn.active {
-    background-color: #000;
-    color: #fff;
-  }
+
+ 
