@@ -12,16 +12,16 @@
 
 <body>
     <div id="container">
-        <div class="menu" id="header">
+        <div id="header" class="menu">
             <a href="bkHome.html">BLAMMOCK</a>
             <ul class="nav">
                 <li><a href="bkShop.html">SHOP</a></li>
                 <li><a href="bkAbout.html">ABOUT</a></li>
                 <li><a href="bkWebTeam.html">WEBSITE TEAM</a></li>
                 <li><a href="bkProduction.html">PRODUCTION</a></li>
-                <li><a href="bkTestimonials.html">TESTIMONIALS</a></li>
-                <li><a href="bkGuide.html">GUIDE</a></li>
+                <li><a href="bkReviews.html">REVIEWS</a></li>
                 <li><a href="bkInvestorPage.html">INVESTOR PAGE</a></li>
+                <li><a id="cart-toggle">CART</a></li>
             </ul>
             <div id="toggle-btn">
                 <input type="radio" name="colors" value="white" id="toggle1"> WHITE
@@ -29,7 +29,7 @@
               </div>
         </div>
 
-        <div class=title>HOW ITS MADE</div>
+        <div class=title>BEHIND THE BLAMMOCK</div>
         <div id="section1">
             <img src="media/FabricStore.png">
             <div>
@@ -72,53 +72,7 @@
         </div>
 
                 
-                <div id="reviews">
-                    <div class=title>REVIEWS</div>
-                    <div class=text> See what our customers are saying! </div>
-                        <br>
-                    
-
-                    <div id="sortsNsearches">
-                        <input type="text" id="keyword" placeholder="Search for reviews..">
-                        <input type="button" value="Search" id="search"class = "btn">
-                        <br><br>
-                        Sort by rating: 
-                        <br>
-                        <input type="button" value="1" id="filter1"class = "btn">
-                        <input type="button" value="2" id="filter2"class = "btn">
-                        <input type="button" value="3" id="filter3"class = "btn">
-                        <input type="button" value="4" id="filter4"class = "btn">
-                        <input type="button" value="5" id="filter5"class = "btn">
-                    </div>
-                    
-                    <div id="results">
-                        <hr>
-
                 
-                    </div>
-
-                    <div id="leaveARev">
-                        <strong>Leave a Review:</strong>
-                        <br>
-                        <br>
-                        <input type="text" id="name" placeholder="Your Name">
-                        <br><br>
-                        Rating:
-                        <select name="rating" id="rating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
-                          <br><br>
-                        <textarea id="text" name="text" style="width:400px; height:200px" placeholder="what are your thoughts?"></textarea>
-                        <br>
-                        <input type="button" value="Submit" id="submit"class = "btn">
-                    </div>
-                
-                    
-                </div><!--close reviews-->
 
 
                 
@@ -133,7 +87,6 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bkGlobal.js"></script>
-    <script src="reviews.js"></script>
 
 </body>
 </html>
