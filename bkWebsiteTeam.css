@@ -82,11 +82,34 @@
     }
 }
 
-
-/* for phones*/
-@media screen and (max-width: 768px) {
-  #reviews{
-      width:80%;
+@media screen and (max-width: 800px) {
+    #container {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #TeamDescriptions {
+        flex-direction:column;
+        max-width: 300px;
+        align-items: left;
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      flex-direction:column;
+        max-width: 200px;
+        align-items: left;
+        font-size: 1vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        column-gap: 0px;
+      }
   }
-
-}
