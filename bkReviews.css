@@ -1,0 +1,54 @@
+.title {
+    text-align: center;
+    font-size: 12vw;
+}
+
+
+#reviews{
+    width:60%;
+    margin:auto;
+    padding-bottom: 10vw;
+    padding-top: 10vw;
+
+}
+
+#reviews .text{
+    text-align: center;
+}
+.btn {
+    font-size: 1vw;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border: solid 1px black;
+      margin-bottom: 10px;
+  
+    }
+  
+.btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+#leaveARev{
+    background-color: lightgray;
+    padding:5%;
+}
+
+@media screen and (max-width: 800px) {
+    #TeamDescriptions {
+        flex-direction:column;
+        max-width: 800px;
+        align-items: center;
+        font-size: 3vw;
+  
+    }
+    #TeamPics{
+      width: 100%;
+      
+    }
+    .memberDesc{
+      font-size: 3vw;
+        
+      }
+  }
