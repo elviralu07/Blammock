@@ -72,11 +72,19 @@
                     <div class=title>REVIEWS</div>
                     <div class=text> See what our customers are saying! </div>
                         <br>
+                    
 
-                    <div class="col">
-                        <input type="text" id="keyword">
+                    <div id="sortsNsearches">
+                        <input type="text" id="keyword" placeholder="Search for reviews..">
                         <input type="button" value="Search" id="search"class = "btn">
-
+                        <br><br>
+                        Sort by rating: 
+                        <br>
+                        <input type="button" value="1" id="filter1"class = "btn">
+                        <input type="button" value="2" id="filter2"class = "btn">
+                        <input type="button" value="3" id="filter3"class = "btn">
+                        <input type="button" value="4" id="filter4"class = "btn">
+                        <input type="button" value="5" id="filter5"class = "btn">
                     </div>
                     
                     <div id="results">
@@ -85,7 +93,25 @@
                 
                     </div>
 
-                   
+                    <div id="leaveARev">
+                        <strong>Leave a Review:</strong>
+                        <br>
+                        <br>
+                        <input type="text" id="name" placeholder="Your Name">
+                        <br><br>
+                        Rating:
+                        <select name="rating" id="rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                          <br><br>
+                        <textarea id="text" name="text" style="width:400px; height:200px" placeholder="what are your thoughts?"></textarea>
+                        <br>
+                        <input type="button" value="Submit" id="submit"class = "btn">
+                    </div>
                 
                     
                 </div><!--close reviews-->

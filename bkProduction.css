@@ -147,6 +147,11 @@
       color: black;
     }
 
+#leaveARev{
+    background-color: lightgray;
+    padding:5%;
+}
+
 @media screen and (max-width: 800px) {
     .heading {
         padding-top: 50px;
